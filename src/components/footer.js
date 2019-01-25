@@ -1,0 +1,20 @@
+import React from 'react'
+import { Link } from 'gatsby'
+
+const Footer = () => (
+    <footer>
+        <div className="container">
+            <div className="row">
+                <div className="col-xl-12 col-lg-12 col-md-12 col-12">
+                    <ul>
+                        <li>© {new Date().getFullYear()}</li>
+                        <li><Link to="/">Home</Link></li>
+                        <li><Link to="project">Project</Link></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+)
+
+export default Footer

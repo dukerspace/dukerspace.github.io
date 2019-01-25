@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import 'node_modules/bootstrap/scss/bootstrap.scss';
+
+html {
+
+}
+
+body {
+}
+
+header {
+  background: #00b894;
+  height: 75px;
+  padding-top: 15px;
+}
+
+.main {
+  min-height: 500px;
+  padding: 20px 0;
+
+}
+
+footer {
+  background: #00b894;
+  padding: 10px;
+  height: 50px;
+  color: #fff;
+  ul {
+    padding: 0px;
+    li {
+      display: inline;
+      padding: 0 5px;
+    }
+  }
+  a,
+  a:hover {
+    color: #fff;
+  }
+}
+
+p {
+  margin: 0;
+}
+
+.profile-cover {
+  padding-top: 200px;
+  height: 400px;
+  background: url(https://images.unsplash.com/photo-1544467187-784a3534a696?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  a,
+  a:hover {
+    color: #fff;
+  }
+}
+
+.project-cover {
+  padding-top: 200px;
+  height: 400px;
+  background: url(https://images.unsplash.com/photo-1519893578517-3252b77e8fdf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1349&q=80) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  a,
+  a:hover {
+    color: #fff;
+  }
+}
