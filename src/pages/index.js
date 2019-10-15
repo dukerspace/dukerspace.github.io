@@ -64,7 +64,7 @@ const IndexPage = () => (
                     <div className="row mb-3">
                         <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                             <p><strong>Software Engineer</strong></p>
-                            <p>November 2016 - November 2017</p>
+                            <p>June 2016 - November 2017</p>
                             <p>Tradition Brokers (Thailand) Limited.</p>
                         </div>
                     </div>
