@@ -1,3 +1,4 @@
 [submodule "blog"]
 	path = content/blog
 	url = https://github.com/dukerspace/blog
+	branch = master
