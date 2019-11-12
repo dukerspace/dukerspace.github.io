@@ -2,7 +2,7 @@ import React from 'react'
 import Layout from '../components/layout'
 import profile from '../images/profile.jpg'
 
-const IndexPage = () => (
+const MePage = () => (
   <Layout>
     <div className="main container">
       <div className="row">
@@ -16,11 +16,10 @@ const IndexPage = () => (
                 <strong>Montol Saklor</strong>
               </p>
               <p className="text-center mb-1">Software Engineer</p>
-              <p className="text-center mb-1">montolsaklor[at]gmail.com</p>
+              <p className="text-center mb-1">montolsaklor@gmail.com</p>
               <p className="text-center mb-1">
                 <a href="https://github.com/dukerspace" target="_blank">
-                  <i className="fab fa-github"></i>{' '}
-                  https://github.com/dukerspace
+                  <i className="fab fa-github" /> https://github.com/dukerspace
                 </a>
               </p>
             </div>
@@ -105,6 +104,7 @@ const IndexPage = () => (
           <div className="row mb-1">
             <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
               <span className="ml-1 mr-1 badge badge-success">PHP</span>
+              <span className="ml-1 mr-1 badge badge-success">Lavarel</span>
               <span className="ml-1 mr-1 badge badge-success">NodeJs</span>
               <span className="ml-1 mr-1 badge badge-success">Docker</span>
               <span className="ml-1 mr-1 badge badge-success">Git</span>
@@ -112,7 +112,6 @@ const IndexPage = () => (
               <span className="ml-1 mr-1 badge badge-success">Scala</span>
               <span className="ml-1 mr-1 badge badge-success">HTML</span>
               <span className="ml-1 mr-1 badge badge-success">CSS</span>
-              <span className="ml-1 mr-1 badge badge-success">Lavarel</span>
               <span className="ml-1 mr-1 badge badge-success">SQL</span>
               <span className="ml-1 mr-1 badge badge-success">PostgreSQL</span>
               <span className="ml-1 mr-1 badge badge-success">MySQL</span>
@@ -124,7 +123,7 @@ const IndexPage = () => (
               <span className="ml-1 mr-1 badge badge-success">
                 Cloud Service
               </span>
-              <span className="ml-1 mr-1 badge badge-success">Jquery</span>
+              <span className="ml-1 mr-1 badge badge-success">jQuery</span>
             </div>
           </div>
         </div>
@@ -133,4 +132,4 @@ const IndexPage = () => (
   </Layout>
 )
 
-export default IndexPage
+export default MePage

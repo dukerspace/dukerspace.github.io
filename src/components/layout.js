@@ -20,17 +20,15 @@ const Layout = ({ children }) => (
     render={data => (
       <>
         <Header siteTitle={data.site.siteMetadata.title} />
-        <div>
-          {children}
-        </div>
-        <Footer/>
+        <div className="main container">{children}</div>
+        <Footer />
       </>
     )}
   />
 )
 
 Layout.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node.isRequired
 }
 
 export default Layout

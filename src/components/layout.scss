@@ -8,6 +8,10 @@ html {
 body {
 }
 
+ul {
+	padding: 0;
+}
+
 header {
   background: #00b894;
   height: 75px;
@@ -16,7 +20,7 @@ header {
 
 .main {
   min-height: 500px;
-  padding: 20px 0;
+  padding: 20px;
 
 }
 
@@ -70,4 +74,11 @@ p {
   a:hover {
     color: #fff;
   }
+}
+
+ul.sidebar {
+	li {
+		list-style: none;
+		text-transform: uppercase;
+	}
 }
