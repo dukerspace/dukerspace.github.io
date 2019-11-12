@@ -18,20 +18,10 @@ const TheNotebookPage = ({ data }) => (
 
 export default TheNotebookPage
 export const query = graphql`
-  query {
-    allMarkdownRemark(
-      filter: { frontmatter: { type: { eq: "the-notebook" } } }
-    ) {
-      edges {
-        node {
-          frontmatter {
-            title
-            path
-            type
-          }
-          html
-        }
-      }
+  {
+    markdownRemark(frontmatter: {path: {eq: "/the-notebook/readme"}}) {
+      id
+      html
     }
   }
 `
