@@ -1,0 +1,1 @@
+{"componentChunkName":"component---src-pages-blog-js","path":"/blog","result":{"data":{"allMarkdownRemark":{"edges":[{"node":{"frontmatter":{"title":"blog 1","path":"/blog/201902/1-blog"},"html":"<h2>blog x-1</h2>"}},{"node":{"frontmatter":{"title":"blog 2","path":"/blog/201902/blog-2"},"html":"<h2>xxx222</h2>"}}]}},"pageContext":{"isCreatedByStatefulCreatePages":true}}}
