@@ -5,31 +5,22 @@ import Layout from '../components/layout'
 const BlogPage = ({ data }) => (
   <Layout>
     <div>
-      <h1>My Site's Files</h1>
-      <table>
-        <thead>
-          <tr>
-            <th>relativePath</th>
-            <th>prettySize</th>
-            <th>extension</th>
-            <th>birthTime</th>
-          </tr>
-        </thead>
-        <tbody>
-          {data.allMarkdownRemark
-            ? data.allMarkdownRemark.edges.map(({ node }, index) => (
-                <tr key={index}>
-                  <td>
-                    <Link to={`${node.frontmatter.path}`}>
-                      {node.frontmatter.title}
-                    </Link>
-                  </td>
-                  <td>{node.html}</td>
-                </tr>
-              ))
-            : null}
-        </tbody>
-      </table>
+      <h1>Blog</h1>
+      <hr />
+      {data.allMarkdownRemark
+        ? data.allMarkdownRemark.edges.map(({ node }, index) => (
+            <div className="row">
+              <div className="col-lg-12 col-md-12 col-sm-12 col-12">
+                <h5>
+                  <Link to={`${node.frontmatter.path}`}>
+                    {node.frontmatter.title}
+                  </Link>
+                </h5>
+                <p>{node.frontmatter.date}</p>
+              </div>
+            </div>
+          ))
+        : null}
     </div>
   </Layout>
 )
@@ -44,6 +35,8 @@ export const query = graphql`
           frontmatter {
             title
             path
+            date(formatString: "MMMM DD, YYYY")
+            description
           }
           html
         }

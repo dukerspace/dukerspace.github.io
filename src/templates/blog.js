@@ -8,6 +8,8 @@ export default ({ data }) => {
     <Layout>
       <div>
         <h1>{post.frontmatter.title}</h1>
+        <p>{post.frontmatter.date}</p>
+        <hr />
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
       </div>
     </Layout>
@@ -21,6 +23,8 @@ export const query = graphql`
         title
         path
         type
+        date(formatString: "MMMM DD, YYYY")
+        description
       }
       html
     }
