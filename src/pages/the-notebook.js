@@ -17,7 +17,7 @@ const TheNotebookPage = ({ data }) => (
 export default TheNotebookPage
 
 export const query = graphql`{
-  content: markdownRemark(frontmatter: {path: {eq: "/the-notebook/readme"}}) {
+  content: markdownRemark(frontmatter: {path: {eq: "/the-notebook/idx"}}) {
     id
     html
   }
