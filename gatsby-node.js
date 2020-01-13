@@ -42,18 +42,11 @@ exports.createPages = ({ graphql, actions }) => {
       return Promise.reject(result.errors);
     }
 
-    const blogPage = path.resolve(`./src/papges/blog.js`)
     const blogPost = path.resolve(`./src/templates/blog.js`)
-    const theNotebookPage = path.resolve(`./src/pages/the-notebook.js`)
     const theNotebookPost = path.resolve(`./src/templates/the-notebook.js`)
 
-
-    // createPage({
-    //   path: '/the-notebook',
-    //   component: theNotebookPage,
-    // });
     const blogs = result.data.allMarkdownRemark.edges.filter(({node}) => node.frontmatter.type === 'blog')
-    const theNotebook = result.data.allMarkdownRemark.edges.filter(({node}) => node.frontmatter.type === 'the-notebook')
+    const theNotebook = result.data.allMarkdownRemark.edges.filter(({node}) => node.frontmatter.type === 'docs')
 
     blogs.forEach(({ node }) => {
       const path = node.frontmatter.path;
