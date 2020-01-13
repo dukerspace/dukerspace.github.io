@@ -2,6 +2,6 @@
 	path = content/blog
 	url = https://github.com/dukerspace/blog
 	branch = master
-[submodule "content/notebook"]
-	path = content/notebook
+[submodule "notebook"]
+	path = content/the-notebook
 	url = https://github.com/dukerspace/the-notebook
