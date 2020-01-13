@@ -2,26 +2,24 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import SidebarTheNotebook from '../components/sidebar/the-notebook'
+import parse from 'html-react-parser'
 
 const TheNotebookPage = ({ data }) => (
   <Layout>
     <div className="row">
-      <div className="col-lg-4 col-md-4 col-sm-4 col-12">
-        <SidebarTheNotebook data={data} />
-      </div>
-      <div className="col-lg-8 col-md-4 col-sm-4 col-12">
-        <h1>The Notebook</h1>
+      <div className="col-lg-12 col-md-12 col-sm-12 col-12">
+        {parse(data.content.html)}
       </div>
     </div>
   </Layout>
 )
 
 export default TheNotebookPage
-export const query = graphql`
-  {
-    markdownRemark(frontmatter: {path: {eq: "/the-notebook/readme"}}) {
-      id
-      html
-    }
+
+export const query = graphql`{
+  content: markdownRemark(frontmatter: {path: {eq: "/the-notebook/readme"}}) {
+    id
+    html
   }
+}
 `

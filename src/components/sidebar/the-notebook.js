@@ -1,11 +1,25 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { useStaticQuery, graphql, Link } from 'gatsby'
 
-const SidebarTheNotebook = props => (
+const SidebarTheNotebook = () => {
+
+  const data = useStaticQuery(graphql`{
+    contents: allMarkdownRemark(filter: { frontmatter: { type: { eq: "docs" } } }) {
+      edges {
+        node {
+          frontmatter {
+          title
+          path
+          }
+        }
+      }
+    }
+  }`)
+  return(
   <div>
     <ul className="sidebar">
-      {props.data.allMarkdownRemark
-        ? props.data.allMarkdownRemark.edges.map(({ node }, index) => (
+      { data.contents
+        ? data.contents.edges.map(({ node }, index) => (
             <li key={index}>
               <Link to={`${node.frontmatter.path}`}>
                 {node.frontmatter.title}
@@ -15,6 +29,6 @@ const SidebarTheNotebook = props => (
         : null}
     </ul>
   </div>
-)
+)}
 
 export default SidebarTheNotebook
