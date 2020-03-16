@@ -66,7 +66,7 @@ const MePage = () => (
           <div className="row mb-3">
             <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
               <p>
-                <strong>Full-Stack PHP Developer</strong>
+                <strong>PHP Developer</strong>
               </p>
               <p>June 2015 - September 2015</p>
               <p>Intsia Co.,Ltd</p>
