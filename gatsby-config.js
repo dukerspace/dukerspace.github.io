@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `DUKERSPACE`,
     description: `dukerspace on blog.`,
-    author: `montol saklor`,
+    author: `montol saklor`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -10,33 +10,42 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
-      },
+        path: `${__dirname}/src/images`
+      }
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/content/the-notebook/files`,
-      },
+        path: `${__dirname}/content/the-notebook/files`
+      }
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `blog`,
-        path: `${__dirname}/content/blog`,
-      },
+        path: `${__dirname}/content/blog`
+      }
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `the-notebook`,
-        path: `${__dirname}/content/the-notebook`,
-      },
+        path: `${__dirname}/content/the-notebook`
+      }
     },
     `gatsby-plugin-remove-trailing-slashes`,
     `gatsby-plugin-sass`,
-    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-prismjs`
+          }
+        ]
+      }
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -48,12 +57,18 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#00b894`,
         display: `minimal-ui`,
-        icon: `src/images/icon.png`, // This path is relative to the root of the site.
-      },
+        icon: `src/images/icon.png` // This path is relative to the root of the site.
+      }
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: `UA-161879650-1`
+      }
     },
     `gatsby-plugin-offline`
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
     // 'gatsby-plugin-offline',
-  ],
+  ]
 }

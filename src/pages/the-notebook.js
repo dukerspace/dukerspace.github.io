@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout'
-import SidebarTheNotebook from '../components/sidebar/the-notebook'
+import TheNotebook from '../components/sidebar/TheNotebook'
 import parse from 'html-react-parser'
 
 const TheNotebookPage = ({ data }) => (
@@ -16,10 +16,13 @@ const TheNotebookPage = ({ data }) => (
 
 export default TheNotebookPage
 
-export const query = graphql`{
-  content: markdownRemark(frontmatter: {path: {eq: "/the-notebook/idx"}}) {
-    id
-    html
+export const query = graphql`
+  {
+    content: markdownRemark(
+      frontmatter: { path: { eq: "/the-notebook/idx" } }
+    ) {
+      id
+      html
+    }
   }
-}
 `

@@ -6,7 +6,7 @@ const Footer = () => (
     <div className="container">
       <div className="row">
         <div className="col-xl-12 col-lg-12 col-md-12 col-12">
-          <ul>
+          <ul className="text-center">
             <li>© {new Date().getFullYear()}</li>
             <li>
               <Link to="/">Home</Link>

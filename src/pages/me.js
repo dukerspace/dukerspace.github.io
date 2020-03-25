@@ -1,6 +1,9 @@
 import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 import Layout from '../components/layout'
 import profile from '../images/profile.jpg'
+import './me.scss'
 
 const MePage = () => (
   <Layout>
@@ -16,10 +19,17 @@ const MePage = () => (
                 <strong>Montol Saklor</strong>
               </p>
               <p className="text-center mb-1">Software Engineer</p>
-              <p className="text-center mb-1">montolsaklor@gmail.com</p>
               <p className="text-center mb-1">
+                <a
+                  className="mr-3"
+                  href="https://www.linkedin.com/in/montol-saklor-381657177"
+                  target="_blank"
+                >
+                  <FontAwesomeIcon icon={faLinkedinIn} />
+                </a>
+
                 <a href="https://github.com/dukerspace" target="_blank">
-                  <i className="fab fa-github" /> https://github.com/dukerspace
+                  <FontAwesomeIcon icon={faGithub} />
                 </a>
               </p>
             </div>
@@ -103,24 +113,24 @@ const MePage = () => (
 
           <div className="row mb-1">
             <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-              <span className="ml-1 mr-1 badge badge-success">PHP</span>
-              <span className="ml-1 mr-1 badge badge-success">Lavarel</span>
-              <span className="ml-1 mr-1 badge badge-success">NodeJs</span>
-              <span className="ml-1 mr-1 badge badge-success">Docker</span>
-              <span className="ml-1 mr-1 badge badge-success">Git</span>
-              <span className="ml-1 mr-1 badge badge-success">React.js</span>
-              <span className="ml-1 mr-1 badge badge-success">Typescript</span>
-              <span className="ml-1 mr-1 badge badge-success">Scala</span>
-              <span className="ml-1 mr-1 badge badge-success">HTML</span>
-              <span className="ml-1 mr-1 badge badge-success">CSS</span>
-              <span className="ml-1 mr-1 badge badge-success">SQL</span>
-              <span className="ml-1 mr-1 badge badge-success">PostgreSQL</span>
-              <span className="ml-1 mr-1 badge badge-success">MySQL</span>
-              <span className="ml-1 mr-1 badge badge-success">PostgreSQL</span>
-              <span className="ml-1 mr-1 badge badge-success">Linux</span>
-              <span className="ml-1 mr-1 badge badge-success">Play Framework</span>
-              <span className="ml-1 mr-1 badge badge-success">Cloud Service</span>
-              <span className="ml-1 mr-1 badge badge-success">jQuery</span>
+              <span className="ml-1 mr-1 badge badge-pink">PHP</span>
+              <span className="ml-1 mr-1 badge badge-pink">Lavarel</span>
+              <span className="ml-1 mr-1 badge badge-pink">NodeJs</span>
+              <span className="ml-1 mr-1 badge badge-pink">Docker</span>
+              <span className="ml-1 mr-1 badge badge-pink">Git</span>
+              <span className="ml-1 mr-1 badge badge-pink">React.js</span>
+              <span className="ml-1 mr-1 badge badge-pink">Typescript</span>
+              <span className="ml-1 mr-1 badge badge-pink">Scala</span>
+              <span className="ml-1 mr-1 badge badge-pink">HTML</span>
+              <span className="ml-1 mr-1 badge badge-pink">CSS</span>
+              <span className="ml-1 mr-1 badge badge-pink">SQL</span>
+              <span className="ml-1 mr-1 badge badge-pink">PostgreSQL</span>
+              <span className="ml-1 mr-1 badge badge-pink">MySQL</span>
+              <span className="ml-1 mr-1 badge badge-pink">PostgreSQL</span>
+              <span className="ml-1 mr-1 badge badge-pink">Linux</span>
+              <span className="ml-1 mr-1 badge badge-pink">Play Framework</span>
+              <span className="ml-1 mr-1 badge badge-pink">Cloud Service</span>
+              <span className="ml-1 mr-1 badge badge-pink">jQuery</span>
             </div>
           </div>
         </div>

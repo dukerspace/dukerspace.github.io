@@ -13,7 +13,7 @@ const NotFoundPage = () => (
           <img
             className="img-fluid"
             src="https://images.unsplash.com/photo-1494675006433-9e9428eba6c7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1352&q=80"
-            />
+          />
         </p>
         <p className="text-center">
           Original image from{' '}

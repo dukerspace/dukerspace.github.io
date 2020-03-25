@@ -14,7 +14,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     createNodeField({
       node,
       name: `slug`,
-      value: slug,
+      value: slug
     })
   }
 }
@@ -39,17 +39,21 @@ exports.createPages = ({ graphql, actions }) => {
     }
   `).then(result => {
     if (result.errors) {
-      return Promise.reject(result.errors);
+      return Promise.reject(result.errors)
     }
 
     const blogPost = path.resolve(`./src/templates/blog.js`)
     const theNotebookPost = path.resolve(`./src/templates/the-notebook.js`)
 
-    const blogs = result.data.allMarkdownRemark.edges.filter(({node}) => node.frontmatter.type === 'blog')
-    const theNotebook = result.data.allMarkdownRemark.edges.filter(({node}) => node.frontmatter.type === 'docs')
+    const blogs = result.data.allMarkdownRemark.edges.filter(
+      ({ node }) => node.frontmatter.type === 'blog'
+    )
+    const theNotebook = result.data.allMarkdownRemark.edges.filter(
+      ({ node }) => node.frontmatter.type === 'docs'
+    )
 
     blogs.forEach(({ node }) => {
-      const path = node.frontmatter.path;
+      const path = node.frontmatter.path
       createPage({
         path: path,
         component: blogPost,
@@ -60,7 +64,7 @@ exports.createPages = ({ graphql, actions }) => {
     })
 
     theNotebook.forEach(({ node }) => {
-      const path = node.frontmatter.path;
+      const path = node.frontmatter.path
       createPage({
         path: path,
         component: theNotebookPost,
