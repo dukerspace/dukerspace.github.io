@@ -1,12 +1,12 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import Layout from '../components/layout'
+import DefaultLayout from '../components/Layout/DefaultLayout'
 import TheNotebook from '../components/sidebar/TheNotebook'
 
 export default props => {
   const post = props.data.content
   return (
-    <Layout>
+    <DefaultLayout>
       <div className="row">
         <div className="col-lg-4 col-md-4 col-sm-4 col-12">
           <TheNotebook />
@@ -16,7 +16,7 @@ export default props => {
           <div dangerouslySetInnerHTML={{ __html: post.html }} />
         </div>
       </div>
-    </Layout>
+    </DefaultLayout>
   )
 }
 

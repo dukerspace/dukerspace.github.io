@@ -1,12 +1,13 @@
 import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 import React from 'react'
+import { Container, Row, Col } from 'react-bootstrap'
 
 const Header = ({ siteTitle }) => (
   <header>
-    <div className="container">
-      <div className="row">
-        <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+    <Container>
+      <Row>
+        <Col xs={12}>
           <h1 className="text-center">
             <Link
               to="/"
@@ -18,9 +19,9 @@ const Header = ({ siteTitle }) => (
               {siteTitle}
             </Link>
           </h1>
-        </div>
-      </div>
-    </div>
+        </Col>
+      </Row>
+    </Container>
   </header>
 )
 

@@ -1,11 +1,12 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import { Container, Row, Col } from 'react-bootstrap'
 
 const Footer = () => (
   <footer>
-    <div className="container">
-      <div className="row">
-        <div className="col-xl-12 col-lg-12 col-md-12 col-12">
+    <Container>
+      <Row>
+        <Col xs={12}>
           <ul className="text-center">
             <li>© {new Date().getFullYear()}</li>
             <li>
@@ -21,12 +22,12 @@ const Footer = () => (
               <Link to="blog">Blog</Link>
             </li>
             <li>
-              <Link to="me">About Me</Link>
+              <Link to="about">About Me</Link>
             </li>
           </ul>
-        </div>
-      </div>
-    </div>
+        </Col>
+      </Row>
+    </Container>
   </footer>
 )
 

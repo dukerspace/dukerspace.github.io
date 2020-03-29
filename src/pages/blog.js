@@ -1,9 +1,9 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
-import Layout from '../components/layout'
+import DefaultLayout from '../components/Layout/DefaultLayout'
 
 const BlogPage = ({ data }) => (
-  <Layout>
+  <DefaultLayout>
     <div>
       <h1>Blog</h1>
       <hr />
@@ -22,7 +22,7 @@ const BlogPage = ({ data }) => (
           ))
         : null}
     </div>
-  </Layout>
+  </DefaultLayout>
 )
 
 export default BlogPage

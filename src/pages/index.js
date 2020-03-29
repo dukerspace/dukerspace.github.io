@@ -1,12 +1,14 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
-import Layout from '../components/Layout'
-import profile from '../images/profile.jpg'
+import DefaultLayout from '../components/Layout/DefaultLayout'
+import SEO from '../components/Seo'
+import profile from '../assets/images/profile.jpg'
 import './index.scss'
 
 const IndexPage = () => (
-  <Layout>
+  <DefaultLayout>
+    <SEO title="DUKERSPACE" />
     <div className="main container">
       <div className="row">
         <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
@@ -14,11 +16,10 @@ const IndexPage = () => (
             <img className="profile rounded-circle" src={profile} />
           </p>
 
-          <p className="text-center mb-1">
-            <h2>Montol Saklor</h2>
-          </p>
+          <h2 className="text-center mb-1">Montol Saklor</h2>
 
-          <p className="text-center mb-1">Software Engineer</p>
+          <h4 className="text-center mb-1">Software Engineer</h4>
+
           <p className="text-center mb-1">
             <a
               className="mr-3"
@@ -35,7 +36,7 @@ const IndexPage = () => (
         </div>
       </div>
     </div>
-  </Layout>
+  </DefaultLayout>
 )
 
 export default IndexPage

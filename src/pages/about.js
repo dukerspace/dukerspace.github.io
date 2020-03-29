@@ -1,12 +1,12 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
-import Layout from '../components/layout'
-import profile from '../images/profile.jpg'
-import './me.scss'
+import DefaultLayout from '../components/Layout/DefaultLayout'
+import profile from '../assets/images/profile.jpg'
+import './about.scss'
 
 const MePage = () => (
-  <Layout>
+  <DefaultLayout>
     <div className="main container">
       <div className="row">
         <div className="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12">
@@ -136,7 +136,7 @@ const MePage = () => (
         </div>
       </div>
     </div>
-  </Layout>
+  </DefaultLayout>
 )
 
 export default MePage

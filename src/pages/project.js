@@ -1,14 +1,14 @@
 import React from 'react'
-import Layout from '../components/layout'
-import corploc from '../images/corporatelocations-hk.png'
-import myspabooking from '../images/myspabooking.png'
+import DefaultLayout from '../components/Layout/DefaultLayout'
+import corploc from '../assets/images/corporatelocations-hk.png'
+import myspabooking from '../assets/images/myspabooking.png'
 
 const ProjectPage = () => (
-  <Layout>
+  <DefaultLayout>
     <div className="main container">
       <div className="row mb-1">
         <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-          <h2 className="text-center">PERSONAL PROJECTS</h2>
+          <h2 className="text-center">Personal Projects</h2>
         </div>
 
         <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
@@ -35,7 +35,7 @@ const ProjectPage = () => (
 
       <div className="row mb- 1">
         <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-          <h2 className="text-center">PORTFOLIO</h2>
+          <h2 className="text-center">Portfolio</h2>
         </div>
 
         <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
@@ -79,7 +79,7 @@ const ProjectPage = () => (
         </div>
       </div>
     </div>
-  </Layout>
+  </DefaultLayout>
 )
 
 export default ProjectPage
