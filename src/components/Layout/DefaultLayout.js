@@ -27,7 +27,7 @@ const DefaultLayout = ({ children }) => (
   />
 )
 
-Layout.propTypes = {
+DefaultLayout.propTypes = {
   children: PropTypes.node.isRequired
 }
 

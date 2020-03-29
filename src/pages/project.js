@@ -43,7 +43,7 @@ const ProjectPage = () => (
         </div>
         <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
           <p className="text-center">
-            <img className="img-fluid" src={corploc} />
+            <img className="img-fluid" src={corploc} alt="Corporate Location" />
           </p>
         </div>
         <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
@@ -64,7 +64,7 @@ const ProjectPage = () => (
         </div>
         <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
           <p className="text-center">
-            <img className="img-fluid" src={myspabooking} />
+            <img className="img-fluid" src={myspabooking} alt="My Spa Booking" />
           </p>
         </div>
         <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
