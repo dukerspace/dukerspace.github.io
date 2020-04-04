@@ -15,6 +15,11 @@ const MySpaBookingPage = () => (
         <div className="mb-1 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
           <img className="img-fluid" src={myspabooking} alt="My Spa Booking" />
           <p>Startup booking spa.</p>
+          <p>
+            <a href="http://www.myspabooking.com" target="_blank">
+              Link
+            </a>
+          </p>
         </div>
       </div>
     </div>

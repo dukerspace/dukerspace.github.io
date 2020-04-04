@@ -15,6 +15,11 @@ const CorpLocPage = () => (
         <div className="mb-1 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
           <img className="img-fluid" src={corpLoc} alt="My Spa Booking" />
           <p>Website to find office space in hongkong.</p>
+          <p>
+            <a href="http://www.corporatelocations.com.hk" target="_blank">
+              Link
+            </a>
+          </p>
         </div>
       </div>
     </div>
