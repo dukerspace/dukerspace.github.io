@@ -18,7 +18,7 @@ const IndexPage = () => (
 
           <h2 className="text-center mb-1">Montol Saklor</h2>
 
-          <h4 className="text-center mb-1">Software Engineer</h4>
+          <h5 className="text-center mb-1">Software Engineer</h5>
 
           <p className="text-center mb-1">
             <a
