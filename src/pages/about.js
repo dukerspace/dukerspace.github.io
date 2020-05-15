@@ -98,8 +98,18 @@ const MePage = () => (
               <p>
                 <strong>Software Engineer</strong>
               </p>
-              <p>December 2017 - Now</p>
+              <p>December 2017 - May 2020</p>
               <p>Aware Corporation Ltd.</p>
+            </div>
+          </div>
+
+          <div className="row mb-3">
+            <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+              <p>
+                <strong>Software Developer</strong>
+              </p>
+              <p>May 2020 - Now</p>
+              <p>Artisan Digital Asia.</p>
             </div>
           </div>
 
@@ -113,13 +123,13 @@ const MePage = () => (
 
           <div className="row mb-1">
             <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-              <span className="ml-1 mr-1 badge badge-pink">PHP</span>
-              <span className="ml-1 mr-1 badge badge-pink">Lavarel</span>
-              <span className="ml-1 mr-1 badge badge-pink">NodeJs</span>
-              <span className="ml-1 mr-1 badge badge-pink">Docker</span>
-              <span className="ml-1 mr-1 badge badge-pink">Git</span>
               <span className="ml-1 mr-1 badge badge-pink">React.js</span>
               <span className="ml-1 mr-1 badge badge-pink">Typescript</span>
+              <span className="ml-1 mr-1 badge badge-pink">NodeJs</span>
+              <span className="ml-1 mr-1 badge badge-pink">PHP</span>
+              <span className="ml-1 mr-1 badge badge-pink">Laravel</span>
+              <span className="ml-1 mr-1 badge badge-pink">Docker</span>
+              <span className="ml-1 mr-1 badge badge-pink">Git</span>
               <span className="ml-1 mr-1 badge badge-pink">Scala</span>
               <span className="ml-1 mr-1 badge badge-pink">HTML</span>
               <span className="ml-1 mr-1 badge badge-pink">CSS</span>
