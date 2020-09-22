@@ -1,7 +1,7 @@
 {
   "name": "dukerspace.github.io",
   "private": true,
-  "description": "Profile Web Site",
+  "description": "Profile web site",
   "version": "0.2.1",
   "author": "Montol Saklor <montolsaklor@gmail.com>",
   "dependencies": {
@@ -41,7 +41,7 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "p": "prettier --write 'src/**/*.js'",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public -b master",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public -b gh-pages",
     "start": "npm run develop",
     "clean": "prettier --write \"src/**/*.js\" \"*.js\" ",
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""

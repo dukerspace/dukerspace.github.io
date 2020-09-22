@@ -123,8 +123,9 @@ const MePage = () => (
 
           <div className="row mb-1">
             <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+              <span className="ml-1 mr-1 badge badge-pink">TypeScript</span>
+              <span className="ml-1 mr-1 badge badge-pink">Graphql</span>
               <span className="ml-1 mr-1 badge badge-pink">React.js</span>
-              <span className="ml-1 mr-1 badge badge-pink">Typescript</span>
               <span className="ml-1 mr-1 badge badge-pink">NodeJs</span>
               <span className="ml-1 mr-1 badge badge-pink">PHP</span>
               <span className="ml-1 mr-1 badge badge-pink">Laravel</span>
