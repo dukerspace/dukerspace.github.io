@@ -7,13 +7,17 @@ import './about.scss'
 
 const MePage = () => (
   <DefaultLayout>
-    <div className="main container">
+    <div>
       <div className="row">
         <div className="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12">
           <div className="row mb-2">
             <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
               <p className="text-center mb-2">
-                <img className="img-fluid rounded-circle" src={profile} />
+                <img
+                  className="img-fluid rounded-circle"
+                  src={profile}
+                  alt="profile"
+                />
               </p>
               <p className="text-center mb-1">
                 <strong>Montol Saklor</strong>
@@ -23,12 +27,11 @@ const MePage = () => (
                 <a
                   className="mr-3"
                   href="https://www.linkedin.com/in/montol-saklor-381657177"
-                  target="_blank"
                 >
                   <FontAwesomeIcon icon={faLinkedinIn} />
                 </a>
 
-                <a href="https://github.com/dukerspace" target="_blank">
+                <a href="https://github.com/dukerspace">
                   <FontAwesomeIcon icon={faGithub} />
                 </a>
               </p>

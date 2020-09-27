@@ -68,7 +68,21 @@ module.exports = {
       }
     },
     `gatsby-plugin-offline`,
-    `gatsby-plugin-robots-txt`
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://dukerspace.com',
+        sitemap: 'https://dukerspace.com/sitemap.xml',
+        env: {
+          development: {
+            policy: [{ userAgent: '*', disallow: ['/'] }]
+          },
+          production: {
+            policy: [{ userAgent: '*', allow: '/' }]
+          }
+        }
+      }
+    }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
     // 'gatsby-plugin-offline',

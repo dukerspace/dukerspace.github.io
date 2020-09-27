@@ -6,7 +6,7 @@ import myspabooking from '../../assets/images/myspa-thumb.png'
 
 const ProjectPage = () => (
   <DefaultLayout>
-    <div className="main container">
+    <div>
       <div className="row">
         <div className="mb-1 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
           <h2 className="text-center">Personal Projects</h2>
