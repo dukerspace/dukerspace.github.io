@@ -9,11 +9,15 @@ import './index.scss'
 const IndexPage = () => (
   <DefaultLayout>
     <SEO title="DUKERSPACE" />
-    <div className="main container">
+    <div>
       <div className="row">
         <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
           <p className="text-center mb-2">
-            <img className="profile rounded-circle" src={profile} />
+            <img
+              className="profile rounded-circle"
+              src={profile}
+              alt="profile"
+            />
           </p>
 
           <h2 className="text-center mb-1">Montol Saklor</h2>
@@ -24,12 +28,11 @@ const IndexPage = () => (
             <a
               className="mr-3"
               href="https://www.linkedin.com/in/montol-saklor-381657177"
-              target="_blank"
             >
               <FontAwesomeIcon icon={faLinkedinIn} />
             </a>
 
-            <a href="https://github.com/dukerspace" target="_blank">
+            <a href="https://github.com/dukerspace">
               <FontAwesomeIcon icon={faGithub} />
             </a>
           </p>

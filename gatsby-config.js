@@ -1,5 +1,6 @@
 module.exports = {
   siteMetadata: {
+    siteUrl: 'https://dukerspace.com',
     title: `DUKERSPACE`,
     description: `dukerspace on blog.`,
     author: `montol saklor`
@@ -51,7 +52,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `dukerspace.github.io`,
+        name: `dukerspace.com`,
         short_name: `dukerspace`,
         start_url: `/`,
         background_color: `#ffffff`,
@@ -63,10 +64,25 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: `UA-161879650-1`
+        trackingId: `UA-161879650-2`
       }
     },
-    `gatsby-plugin-offline`
+    `gatsby-plugin-offline`,
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://dukerspace.com',
+        sitemap: 'https://dukerspace.com/sitemap.xml',
+        env: {
+          development: {
+            policy: [{ userAgent: '*', disallow: ['/'] }]
+          },
+          production: {
+            policy: [{ userAgent: '*', allow: '/' }]
+          }
+        }
+      }
+    }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
     // 'gatsby-plugin-offline',
