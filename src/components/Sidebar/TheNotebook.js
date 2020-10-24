@@ -24,7 +24,7 @@ const TheNotebook = () => {
         {data.contents
           ? data.contents.edges.map(({ node }, index) => (
               <li key={index}>
-                <Link to={`${node.frontmatter.path}`}>
+                <Link to={`/${node.frontmatter.path}`}>
                   {node.frontmatter.title}
                 </Link>
               </li>

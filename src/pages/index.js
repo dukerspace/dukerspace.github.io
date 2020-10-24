@@ -2,13 +2,12 @@ import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 import DefaultLayout from '../components/Layout/DefaultLayout'
-import SEO from '../components/Seo'
+
 import profile from '../assets/images/profile.jpg'
 import './index.scss'
 
 const IndexPage = () => (
   <DefaultLayout>
-    <SEO title="DUKERSPACE" />
     <div>
       <div className="row">
         <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
