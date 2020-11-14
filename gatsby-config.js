@@ -3,7 +3,7 @@ module.exports = {
     siteUrl: 'https://dukerspace.com',
     title: `DUKERSPACE`,
     description: `dukerspace on blog.`,
-    author: `montol saklor`
+    author: `montol saklor`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -11,29 +11,29 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/assets/images`
-      }
+        path: `${__dirname}/src/assets/images`,
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/content/the-notebook/files`
-      }
+        path: `${__dirname}/content/the-notebook/files`,
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `blog`,
-        path: `${__dirname}/content/blog`
-      }
+        path: `${__dirname}/content/blog`,
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `the-notebook`,
-        path: `${__dirname}/content/the-notebook`
-      }
+        path: `${__dirname}/content/the-notebook`,
+      },
     },
     `gatsby-plugin-remove-trailing-slashes`,
     `gatsby-plugin-sass`,
@@ -42,10 +42,10 @@ module.exports = {
       options: {
         plugins: [
           {
-            resolve: `gatsby-remark-prismjs`
-          }
-        ]
-      }
+            resolve: `gatsby-remark-prismjs`,
+          },
+        ],
+      },
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -55,17 +55,17 @@ module.exports = {
         name: `dukerspace.com`,
         short_name: `dukerspace`,
         start_url: `/`,
-        background_color: `#ffffff`,
-        theme_color: `#00b894`,
+        background_color: `#0c2e47`,
+        theme_color: `#0c2e47`,
         display: `minimal-ui`,
-        icon: `src/assets/images/icon.png` // This path is relative to the root of the site.
-      }
+        icon: `src/assets/images/icon.png`, // This path is relative to the root of the site.
+      },
     },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: `UA-161879650-2`
-      }
+        trackingId: `UA-161879650-2`,
+      },
     },
     `gatsby-plugin-offline`,
     {
@@ -75,16 +75,16 @@ module.exports = {
         sitemap: 'https://dukerspace.com/sitemap.xml',
         env: {
           development: {
-            policy: [{ userAgent: '*', disallow: ['/'] }]
+            policy: [{ userAgent: '*', disallow: ['/'] }],
           },
           production: {
-            policy: [{ userAgent: '*', allow: '/' }]
-          }
-        }
-      }
-    }
+            policy: [{ userAgent: '*', allow: '/' }],
+          },
+        },
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
     // 'gatsby-plugin-offline',
-  ]
+  ],
 }

@@ -111,7 +111,7 @@ const MePage = () => (
               <p>
                 <strong>Software Developer</strong>
               </p>
-              <p>May 2020 - Now</p>
+              <p>May 2020 - Present</p>
               <p>Artisan Digital Asia.</p>
             </div>
           </div>
