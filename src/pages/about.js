@@ -79,20 +79,10 @@ const MePage = () => (
           <div className="row mb-3">
             <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
               <p>
-                <strong>PHP Developer</strong>
+                <strong>Software Developer</strong>
               </p>
-              <p>June 2015 - September 2015</p>
-              <p>Intsia Co.,Ltd</p>
-            </div>
-          </div>
-
-          <div className="row mb-3">
-            <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-              <p>
-                <strong>Software Engineer</strong>
-              </p>
-              <p>June 2016 - November 2017</p>
-              <p>Tradition Brokers (Thailand) Limited.</p>
+              <p>May 2020 - Present</p>
+              <p>Artisan Digital Asia.</p>
             </div>
           </div>
 
@@ -109,12 +99,24 @@ const MePage = () => (
           <div className="row mb-3">
             <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
               <p>
-                <strong>Software Developer</strong>
+                <strong>Software Engineer</strong>
               </p>
-              <p>May 2020 - Present</p>
-              <p>Artisan Digital Asia.</p>
+              <p>June 2016 - November 2017</p>
+              <p>Tradition Brokers (Thailand) Limited.</p>
             </div>
           </div>
+
+          <div className="row mb-3">
+            <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+              <p>
+                <strong>PHP Developer</strong>
+              </p>
+              <p>June 2015 - September 2015</p>
+              <p>Intsia Co.,Ltd</p>
+            </div>
+          </div>
+
+          
 
           <hr />
 
@@ -127,6 +129,7 @@ const MePage = () => (
           <div className="row mb-1">
             <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
               <span className="ml-1 mr-1 badge badge-pink">TypeScript</span>
+              <span className="ml-1 mr-1 badge badge-pink">Go Lang</span>
               <span className="ml-1 mr-1 badge badge-pink">Graphql</span>
               <span className="ml-1 mr-1 badge badge-pink">React.js</span>
               <span className="ml-1 mr-1 badge badge-pink">NodeJs</span>
