@@ -2,7 +2,7 @@
   "name": "dukerspace.github.io",
   "private": true,
   "description": "Profile web site",
-  "version": "0.2.2",
+  "version": "0.3.2",
   "author": "Montol Saklor <montolsaklor@gmail.com>",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "1.2.28",

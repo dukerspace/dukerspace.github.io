@@ -69,16 +69,6 @@ const MePage = () => (
           <div className="row mb-3">
             <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
               <p>
-                <strong>Internship Marketing</strong>
-              </p>
-              <p>March 2013 - May 2013</p>
-              <p>True Corporation Public Company</p>
-            </div>
-          </div>
-
-          <div className="row mb-3">
-            <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-              <p>
                 <strong>Software Developer</strong>
               </p>
               <p>May 2020 - Present</p>
@@ -116,7 +106,15 @@ const MePage = () => (
             </div>
           </div>
 
-          
+          <div className="row mb-3">
+            <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+              <p>
+                <strong>Internship Marketing</strong>
+              </p>
+              <p>March 2013 - May 2013</p>
+              <p>True Corporation Public Company</p>
+            </div>
+          </div>
 
           <hr />
 
