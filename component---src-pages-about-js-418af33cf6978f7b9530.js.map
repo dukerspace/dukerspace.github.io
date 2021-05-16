@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://my-gatsby-site/./src/pages/about.js"],"names":[],"mappings":"4HAIA,UAJkB,WAChB,OAAO","file":"component---src-pages-about-js-418af33cf6978f7b9530.js","sourcesContent":["const AboutPage = () => {\n  return <>a</>;\n};\n\nexport default AboutPage;\n"],"sourceRoot":""}
