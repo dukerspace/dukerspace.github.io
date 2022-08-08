@@ -71,7 +71,17 @@ const MePage = () => (
               <p>
                 <strong>Software Developer</strong>
               </p>
-              <p>May 2020 - Present</p>
+              <p>December 2021 - Present</p>
+              <p>BANPU Public Company Limited.</p>
+            </div>
+          </div>
+          
+          <div className="row mb-3">
+            <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+              <p>
+                <strong>Software Developer</strong>
+              </p>
+              <p>May 2020 - December 2021</p>
               <p>Artisan Digital Asia.</p>
             </div>
           </div>
