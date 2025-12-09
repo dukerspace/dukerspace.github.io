@@ -7,6 +7,64 @@ import DefaultLayout from '../components/Layout/DefaultLayout'
 import profile from '../assets/images/profile.jpg'
 import './index.css'
 
+const monthNames: { [key: string]: number } = {
+  January: 0, February: 1, March: 2, April: 3, May: 4, June: 5,
+  July: 6, August: 7, September: 8, October: 9, November: 10, December: 11
+}
+
+const calculateDuration = (dateRange: string): string => {
+  const isPresent = dateRange.includes('Present')
+  const parts = dateRange.split(' - ')
+  
+  if (parts.length !== 2) return ''
+  
+  const startStr = parts[0].trim()
+  const endStr = parts[1].trim()
+  
+  const startMatch = startStr.match(/(\w+)\s+(\d{4})/)
+  if (!startMatch) return ''
+  
+  const startMonth = monthNames[startMatch[1]]
+  const startYear = parseInt(startMatch[2])
+  
+  let endMonth: number
+  let endYear: number
+  
+  if (isPresent) {
+    const now = new Date()
+    endMonth = now.getMonth()
+    endYear = now.getFullYear()
+  } else {
+    const endMatch = endStr.match(/(\w+)\s+(\d{4})/)
+    if (!endMatch) return ''
+    endMonth = monthNames[endMatch[1]]
+    endYear = parseInt(endMatch[2])
+  }
+  
+  let years = endYear - startYear
+  let months = endMonth - startMonth + 1 // Add 1 to include both start and end months
+  
+  // Handle negative months (when end month is earlier in the year than start month)
+  if (months < 0) {
+    years--
+    months += 12
+  }
+  
+  // Handle when months calculation results in 12 or more
+  if (months >= 12) {
+    years += Math.floor(months / 12)
+    months = months % 12
+  }
+  
+  if (years === 0) {
+    return `( ~ ${months} ${months === 1 ? 'month' : 'months'})`
+  } else if (months === 0) {
+    return `( ~ ${years} ${years === 1 ? 'year' : 'years'})`
+  } else {
+    return `( ~ ${years} ${years === 1 ? 'year' : 'years'} ${months} ${months === 1 ? 'month' : 'months'})`
+  }
+}
+
 const IndexPage: React.FC = () => (
   <DefaultLayout>
     <div className="resume-container">
@@ -15,7 +73,7 @@ const IndexPage: React.FC = () => (
         <div className="lg:col-span-4 mb-4">
           <div className="profile-section">
             <img
-              className="w-full max-w-[200px] rounded-full profile"
+              className="w-full max-w-[200px] rounded-full profile mx-auto"
               src={profile}
               alt="Montol Saklor"
             />
@@ -69,37 +127,37 @@ const IndexPage: React.FC = () => (
             
             <div className="resume-item">
               <h4>Software Developer</h4>
-              <p className="date">December 2021 - Present</p>
+              <p className="date">December 2021 - Present {calculateDuration('December 2021 - Present')}</p>
               <p className="company">BANPU Public Company Limited</p>
             </div>
             
             <div className="resume-item">
               <h4>Software Developer</h4>
-              <p className="date">May 2020 - December 2021</p>
+              <p className="date">May 2020 - December 2021 {calculateDuration('May 2020 - December 2021')}</p>
               <p className="company">Artisan Digital Asia</p>
             </div>
 
             <div className="resume-item">
               <h4>Software Engineer</h4>
-              <p className="date">December 2017 - May 2020</p>
+              <p className="date">December 2017 - May 2020 {calculateDuration('December 2017 - May 2020')}</p>
               <p className="company">Aware Corporation Ltd.</p>
             </div>
 
             <div className="resume-item">
               <h4>Software Engineer</h4>
-              <p className="date">June 2016 - November 2017</p>
+              <p className="date">June 2016 - November 2017 {calculateDuration('June 2016 - November 2017')}</p>
               <p className="company">Tradition Brokers (Thailand) Limited</p>
             </div>
 
             <div className="resume-item">
               <h4>PHP Developer</h4>
-              <p className="date">June 2015 - September 2015</p>
+              <p className="date">June 2015 - September 2015 {calculateDuration('June 2015 - September 2015')}</p>
               <p className="company">Intsia Co.,Ltd</p>
             </div>
 
             <div className="resume-item">
               <h4>Internship Marketing</h4>
-              <p className="date">March 2013 - May 2013</p>
+              <p className="date">March 2013 - May 2013 {calculateDuration('March 2013 - May 2013')}</p>
               <p className="company">True Corporation Public Company</p>
             </div>
           </div>
