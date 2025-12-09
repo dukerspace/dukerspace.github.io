@@ -1,0 +1,229 @@
+@import "tailwindcss";
+
+/* Notebook container */
+.notebook-container {
+  @apply max-w-[900px] mx-auto py-8 px-4;
+}
+
+@media (max-width: 768px) {
+  .notebook-container {
+    @apply py-6 px-4;
+  }
+}
+
+.notebook-content {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.notebook-article {
+  @apply bg-white/5 border border-white/15 rounded-xl p-12 backdrop-blur-[10px] shadow-[0_8px_32px_rgba(0,0,0,0.3)] transition-all duration-300;
+}
+
+@media (max-width: 768px) {
+  .notebook-article {
+    @apply p-8 rounded-lg;
+  }
+}
+
+.notebook-article h1 {
+  @apply text-white text-4xl font-semibold mb-6 pb-4 border-b-2 border-[#ec5990] leading-tight;
+}
+
+@media (max-width: 768px) {
+  .notebook-article h1 {
+    @apply text-3xl;
+  }
+}
+
+.notebook-article h2 {
+  @apply text-white text-3xl font-semibold mt-10 mb-5 pt-4 leading-snug;
+}
+
+@media (max-width: 768px) {
+  .notebook-article h2 {
+    @apply text-2xl mt-8 mb-4;
+  }
+}
+
+.notebook-article h3 {
+  @apply text-white text-2xl font-medium mt-8 mb-4 leading-normal;
+}
+
+@media (max-width: 768px) {
+  .notebook-article h3 {
+    @apply text-xl;
+  }
+}
+
+.notebook-article h4 {
+  @apply text-white text-xl font-medium mt-6 mb-3;
+}
+
+@media (max-width: 768px) {
+  .notebook-article h4 {
+    @apply text-lg;
+  }
+}
+
+.notebook-article h5,
+.notebook-article h6 {
+  @apply text-white font-medium mt-5 mb-2;
+}
+
+.notebook-article p {
+  @apply text-[#b8c5d1] text-[1.0625rem] leading-[1.8] my-5;
+}
+
+@media (max-width: 768px) {
+  .notebook-article p {
+    @apply text-base leading-[1.7];
+  }
+}
+
+.notebook-article a {
+  @apply text-[#ec5990] no-underline border-b border-transparent transition-all duration-200;
+}
+
+.notebook-article a:hover {
+  @apply text-[#f06ba3] border-[#f06ba3];
+}
+
+.notebook-article a:visited {
+  @apply text-[#e04a7f];
+}
+
+.notebook-article ul,
+.notebook-article ol {
+  @apply text-[#b8c5d1] my-6 pl-8 leading-[1.8];
+}
+
+.notebook-article ul li,
+.notebook-article ol li {
+  @apply my-3;
+}
+
+.notebook-article ul li p,
+.notebook-article ol li p {
+  @apply my-2;
+}
+
+.notebook-article ul {
+  @apply list-disc;
+}
+
+.notebook-article ul ul {
+  @apply list-[circle] my-2;
+}
+
+.notebook-article ol {
+  @apply list-decimal;
+}
+
+.notebook-article blockquote {
+  @apply border-l-4 border-[#ec5990] py-4 px-6 my-8 bg-[rgba(236,89,144,0.05)] rounded-r-lg italic text-[#b8c5d1];
+}
+
+.notebook-article blockquote p {
+  @apply my-2;
+}
+
+.notebook-article blockquote p:first-child {
+  @apply mt-0;
+}
+
+.notebook-article blockquote p:last-child {
+  @apply mb-0;
+}
+
+.notebook-article pre {
+  @apply bg-black/30 border border-white/15 rounded-lg p-6 my-8 overflow-x-auto text-[0.9375rem] leading-normal;
+}
+
+.notebook-article pre code {
+  @apply bg-transparent p-0 border-0 text-white font-mono;
+}
+
+.notebook-article code {
+  @apply bg-black/30 border border-white/15 rounded px-2 py-1 text-sm font-mono text-[#ec5990];
+}
+
+.notebook-article table {
+  @apply w-full border-collapse my-8 bg-black/30 rounded-lg overflow-hidden;
+}
+
+.notebook-article table th,
+.notebook-article table td {
+  @apply py-3 px-4 text-left border-b border-white/15;
+}
+
+.notebook-article table th {
+  @apply bg-[rgba(236,89,144,0.1)] text-white font-semibold text-[0.9375rem];
+}
+
+.notebook-article table td {
+  @apply text-[#b8c5d1];
+}
+
+.notebook-article table tr:last-child th,
+.notebook-article table tr:last-child td {
+  @apply border-b-0;
+}
+
+.notebook-article table tr:hover {
+  @apply bg-white/5;
+}
+
+.notebook-article hr {
+  @apply border-0 border-t-2 border-white/15 my-12 rounded;
+}
+
+.notebook-article img {
+  @apply max-w-full h-auto rounded-lg my-8 shadow-[0_4px_16px_rgba(0,0,0,0.3)] transition-transform duration-300;
+}
+
+.notebook-article img:hover {
+  @apply scale-[1.02];
+}
+
+.notebook-article strong {
+  @apply text-white font-semibold;
+}
+
+.notebook-article em {
+  @apply italic text-[#b8c5d1];
+}
+
+.notebook-article dl {
+  @apply my-6;
+}
+
+.notebook-article dt {
+  @apply text-white font-semibold mt-4;
+}
+
+.notebook-article dt:first-child {
+  @apply mt-0;
+}
+
+.notebook-article dd {
+  @apply text-[#b8c5d1] my-2 ml-6;
+}
+
+.notebook-article > *:first-child {
+  @apply mt-0;
+}
+
+.notebook-article > *:last-child {
+  @apply mb-0;
+}

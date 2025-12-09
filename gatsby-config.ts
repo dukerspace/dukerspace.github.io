@@ -1,12 +1,16 @@
-module.exports = {
+import type { GatsbyConfig } from 'gatsby'
+
+const config: GatsbyConfig = {
   siteMetadata: {
     siteUrl: 'https://dukerspace.com',
     title: `DUKERSPACE`,
     description: `dukerspace on blog.`,
     author: `montol saklor`,
   },
+  trailingSlash: 'never',
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -24,19 +28,18 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `blog`,
-        path: `${__dirname}/content/blog`,
+        name: `the-notebook`,
+        path: `${__dirname}/content/the-notebook`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `the-notebook`,
-        path: `${__dirname}/content/the-notebook`,
+        name: `nimman-docs`,
+        path: `${__dirname}/content/nimman/docs`,
       },
     },
-    `gatsby-plugin-remove-trailing-slashes`,
-    `gatsby-plugin-sass`,
+    `gatsby-plugin-postcss`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -55,8 +58,8 @@ module.exports = {
         name: `dukerspace.com`,
         short_name: `dukerspace`,
         start_url: `/`,
-        background_color: `#0c2e47`,
-        theme_color: `#0c2e47`,
+        background_color: `#081229`,
+        theme_color: `#081229`,
         display: `minimal-ui`,
         icon: `src/assets/images/icon.png`, // This path is relative to the root of the site.
       },
@@ -88,3 +91,6 @@ module.exports = {
     // 'gatsby-plugin-offline',
   ],
 }
+
+export default config
+

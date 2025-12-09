@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+.profile {
+  @apply max-w-[200px];
+}

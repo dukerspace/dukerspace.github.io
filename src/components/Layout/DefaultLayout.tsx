@@ -1,12 +1,15 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
 
 import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
-import './DefaultLayout.scss'
+import './DefaultLayout.css'
 
-const DefaultLayout = ({ children }) => (
+interface DefaultLayoutProps {
+  children: React.ReactNode
+}
+
+const DefaultLayout: React.FC<DefaultLayoutProps> = ({ children }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -17,18 +20,15 @@ const DefaultLayout = ({ children }) => (
         }
       }
     `}
-    render={data => (
+    render={(data: any) => (
       <>
         <Header siteTitle={data.site.siteMetadata.title} />
-        <div className="main container">{children}</div>
+        <div className="main container mx-auto px-4">{children}</div>
         <Footer />
       </>
     )}
   />
 )
 
-DefaultLayout.propTypes = {
-  children: PropTypes.node.isRequired
-}
-
 export default DefaultLayout
+
