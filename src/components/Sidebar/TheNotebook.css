@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+.notebook-sidebar {
+  @apply sticky top-[100px] bg-white/5 border border-white/15 rounded-xl p-6 backdrop-blur-[10px] shadow-[0_8px_32px_rgba(0,0,0,0.3)] h-fit max-h-[calc(100vh-120px)] overflow-y-auto;
+}
+
+.notebook-sidebar::-webkit-scrollbar {
+  @apply w-1.5;
+}
+
+.notebook-sidebar::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+.notebook-sidebar::-webkit-scrollbar-thumb {
+  @apply bg-white/15 rounded-sm;
+}
+
+.notebook-sidebar::-webkit-scrollbar-thumb:hover {
+  @apply bg-white/25;
+}
+
+@media (max-width: 768px) {
+  .notebook-sidebar {
+    @apply relative top-0 mb-8 max-h-none;
+  }
+}
+
+.notebook-sidebar__header {
+  @apply mb-6;
+}
+
+.notebook-sidebar__title {
+  @apply text-white text-xl font-semibold m-0 mb-4 tracking-wide;
+}
+
+.notebook-sidebar__divider {
+  @apply h-0.5 bg-gradient-to-r from-[#ec5990] to-transparent rounded-sm;
+}
+
+.notebook-sidebar__list {
+  @apply list-none p-0 m-0 flex flex-col gap-2;
+}
+
+.notebook-sidebar__item {
+  @apply m-0;
+}
+
+.notebook-sidebar__link {
+  @apply flex items-center justify-between text-[#b8c5d1] no-underline py-3 px-4 rounded-lg transition-all duration-200 relative text-[0.9375rem] font-normal;
+}
+
+.notebook-sidebar__link:hover {
+  @apply text-white bg-[rgba(236,89,144,0.1)] no-underline translate-x-1;
+}
+
+.notebook-sidebar__link--active {
+  @apply text-[#ec5990] bg-[rgba(236,89,144,0.15)] font-medium;
+}
+
+.notebook-sidebar__link--active:hover {
+  @apply bg-[rgba(236,89,144,0.15)] translate-x-0;
+}
+
+.notebook-sidebar__link-text {
+  @apply flex-1 leading-normal;
+}
+
+.notebook-sidebar__link-indicator {
+  @apply w-1 h-1 bg-[#ec5990] rounded-full ml-3 shadow-[0_0_8px_#ec5990];
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.2);
+  }
+}
+
+@media (max-width: 768px) {
+  .notebook-sidebar {
+    @apply p-5 rounded-lg;
+  }
+
+  .notebook-sidebar__title {
+    @apply text-lg;
+  }
+
+  .notebook-sidebar__link {
+    @apply py-2.5 px-3.5 text-sm;
+  }
+}

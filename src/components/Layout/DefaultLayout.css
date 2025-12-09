@@ -1,0 +1,194 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Base styles - using Tailwind utilities in components */
+@layer base {
+  html,
+  body {
+    @apply bg-[#081229] text-white font-sans;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+a {
+  @apply text-[#ec5990] no-underline;
+}
+
+a:hover {
+  @apply text-[#f06ba3] underline;
+}
+
+ul {
+  @apply p-0 m-0;
+}
+
+hr {
+  @apply border-0 border-t border-white/15 my-8;
+}
+
+header {
+  @apply bg-[#081229] border-b border-white/15 py-6 sticky top-0 z-[1000];
+}
+
+header h1 {
+  @apply text-2xl font-medium m-0;
+}
+
+header h1 a {
+  @apply text-white;
+}
+
+header h1 a:hover {
+  @apply text-[#ec5990] no-underline;
+}
+
+.main {
+  @apply min-h-[calc(100vh-200px)] py-12 px-4 max-w-[1200px];
+}
+
+@media (max-width: 768px) {
+  .main {
+    @apply py-8 px-4;
+  }
+}
+
+footer {
+  @apply bg-[#081229] border-t border-white/15 py-8 px-4 mt-16 text-center;
+}
+
+footer ul {
+  @apply list-none flex justify-center flex-wrap gap-6;
+}
+
+footer ul li {
+  @apply text-[#b8c5d1] text-sm;
+}
+
+footer ul li:not(:last-child)::after {
+  content: '•';
+  @apply ml-6 text-white/15;
+}
+
+footer a {
+  @apply text-[#b8c5d1];
+}
+
+footer a:hover {
+  @apply text-[#ec5990] no-underline;
+}
+
+p {
+  @apply my-2;
+}
+
+/* Resume-specific styles */
+.resume-section {
+  @apply mb-12;
+}
+
+.resume-section h2,
+.resume-section h3 {
+  @apply text-white font-medium mb-6 text-2xl;
+}
+
+.resume-section h2 {
+  @apply text-[1.75rem];
+}
+
+.resume-item {
+  @apply border-l-2 border-[#ec5990] py-5 px-6 mb-6;
+}
+
+.resume-item h4 {
+  @apply text-white font-medium mb-2 text-lg;
+}
+
+.resume-item .date {
+  @apply text-[#b8c5d1] text-sm mb-1;
+}
+
+.resume-item .company {
+  @apply text-[#ec5990] mb-2;
+}
+
+.profile-section {
+  @apply text-center py-8 px-4 mb-8;
+}
+
+.profile-section img {
+  @apply border-2 border-[#ec5990] max-w-[200px];
+}
+
+.profile-section h1 {
+  @apply text-white font-medium my-4 text-[1.75rem];
+}
+
+.profile-section .title {
+  @apply text-[#ec5990] text-base mb-4;
+}
+
+.profile-section .social-links {
+  @apply flex justify-center gap-6 mt-4;
+}
+
+.profile-section .social-links a {
+  @apply text-xl text-[#b8c5d1];
+}
+
+.profile-section .social-links a:hover {
+  @apply text-[#ec5990] no-underline;
+}
+
+.skills-container {
+  @apply flex flex-wrap gap-2 mt-4;
+}
+
+.badge-pink {
+  @apply bg-[rgba(236,89,144,0.15)] text-[#ec5990] border border-[rgba(236,89,144,0.3)] py-1.5 px-3.5 rounded text-sm font-normal;
+}
+
+.profile-cover {
+  @apply pt-[200px] h-[400px] bg-[url(https://images.unsplash.com/photo-1544467187-784a3534a696?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80)] bg-no-repeat bg-center bg-cover;
+}
+
+.profile-cover a {
+  @apply text-white;
+}
+
+.project-cover {
+  @apply pt-[200px] h-[400px] bg-[url(https://images.unsplash.com/photo-1519893578517-3252b77e8fdf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1349&q=80)] bg-no-repeat bg-center bg-cover;
+}
+
+.project-cover a {
+  @apply text-white;
+}
+
+/* Legacy sidebar styles */
+ul.sidebar li {
+  @apply list-none uppercase mb-2;
+}
+
+ul.sidebar li a {
+  @apply text-[#b8c5d1] block p-2;
+}
+
+ul.sidebar li a:hover {
+  @apply text-[#ec5990] no-underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .resume-item {
+    @apply py-4 px-5;
+  }
+
+  .profile-section {
+    @apply py-6 px-4;
+  }
+
+  .profile-section h1 {
+    @apply text-2xl;
+  }
+}
