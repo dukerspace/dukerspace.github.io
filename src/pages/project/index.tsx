@@ -19,6 +19,15 @@ const ProjectPage: React.FC = () => (
             </p>
           </div>
 
+          <div className="my-8">
+            <h2>Suthep</h2>
+            <p>
+              <Link to="/project/suthep">
+                Deployment tool for Docker with automatic Nginx reverse proxy and HTTPS
+              </Link>
+            </p>
+          </div>
+
           <hr />
         </article>
       </div>
