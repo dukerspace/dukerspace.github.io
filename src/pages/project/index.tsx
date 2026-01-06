@@ -11,15 +11,6 @@ const ProjectPage: React.FC = () => (
           <h1>Personal Projects</h1>
           
           <div className="my-8">
-            <h2>Nimman</h2>
-            <p>
-              <Link to="/project/nimman">
-                Zero-downtime deployment tool for Node.js and Bun projects
-              </Link>
-            </p>
-          </div>
-
-          <div className="my-8">
             <h2>Suthep</h2>
             <p>
               <Link to="/project/suthep">

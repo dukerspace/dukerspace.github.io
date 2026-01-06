@@ -1,8 +1,91 @@
 import React from 'react'
+import { useStaticQuery, graphql, Link } from 'gatsby'
 import DefaultLayout from '../../components/Layout/DefaultLayout'
 import '../the-notebook.css'
 
 const SuthepPage: React.FC = () => {
+  const data = useStaticQuery<{
+    docs: {
+      edges: Array<{
+        node: {
+          frontmatter: {
+            title: string
+            path: string
+            language?: string
+          }
+        }
+      }>
+    }
+  }>(graphql`
+    {
+      docs: allMarkdownRemark(
+        filter: { frontmatter: { type: { eq: "suthep-docs" } } }
+        sort: { frontmatter: { title: ASC } }
+      ) {
+        edges {
+          node {
+            frontmatter {
+              title
+              path
+              language
+            }
+          }
+        }
+      }
+    }
+  `)
+
+  // Separate docs by language
+  const englishDocs = data.docs?.edges.filter(
+    ({ node }) => {
+      const lang = node.frontmatter.language
+      const path = node.frontmatter.path || ''
+      return lang === 'en' || path.includes('/en')
+    }
+  ) || []
+  const thaiDocs = data.docs?.edges.filter(
+    ({ node }) => {
+      const lang = node.frontmatter.language
+      const path = node.frontmatter.path || ''
+      return lang === 'th' || path.includes('/th')
+    }
+  ) || []
+
+  // Sort docs by numeric prefix in filename (01, 02, etc.)
+  const sortDocs = (docs: typeof englishDocs) => {
+    if (!docs || docs.length === 0) return []
+    return [...docs].sort((a, b) => {
+      const pathA = a.node.frontmatter.path || ''
+      const pathB = b.node.frontmatter.path || ''
+      
+      // README comes first
+      if (pathA.endsWith('/en') || pathA.endsWith('/th')) return -1
+      if (pathB.endsWith('/en') || pathB.endsWith('/th')) return 1
+      
+      // Extract numeric prefix from path
+      const getOrder = (path: string): number => {
+        if (!path) return 999
+        const pathMap: { [key: string]: number } = {
+          '/introduction': 1,
+          '/installation': 2,
+          '/quick-start': 3,
+          '/configuration': 4,
+          '/commands': 5,
+          '/examples': 6,
+          '/troubleshooting': 7,
+          '/advanced': 8,
+        }
+        const slug = path.split('/').pop() || ''
+        return pathMap[`/${slug}`] || 999
+      }
+      
+      return getOrder(pathA) - getOrder(pathB)
+    })
+  }
+
+  const sortedEnglishDocs = sortDocs(englishDocs)
+  const sortedThaiDocs = sortDocs(thaiDocs)
+
   return (
     <DefaultLayout>
       <div>
@@ -48,6 +131,40 @@ const SuthepPage: React.FC = () => {
               </li>
             </ul>
 
+            <div className="mt-8">
+              <h2>Documentation</h2>
+              
+              {sortedEnglishDocs.length > 0 && (
+                <div className="mb-6">
+                  <h3 className="text-lg font-semibold mb-3">🇬🇧 English</h3>
+                  <ul>
+                    {sortedEnglishDocs.map(({ node }, index) => (
+                      <li key={index}>
+                        <Link to={node.frontmatter.path}>
+                          {node.frontmatter.title}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              {sortedThaiDocs.length > 0 && (
+                <div className="mb-6">
+                  <h3 className="text-lg font-semibold mb-3">🇹🇭 ไทย</h3>
+                  <ul>
+                    {sortedThaiDocs.map(({ node }, index) => (
+                      <li key={index}>
+                        <Link to={node.frontmatter.path}>
+                          {node.frontmatter.title}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </div>
+
             <h2>Technology</h2>
             <p>
               Built with TypeScript, supporting Docker-based deployments. Integrates with Nginx 
@@ -81,4 +198,5 @@ const SuthepPage: React.FC = () => {
 }
 
 export default SuthepPage
+
 

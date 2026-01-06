@@ -35,8 +35,8 @@ const config: GatsbyConfig = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `nimman-docs`,
-        path: `${__dirname}/content/nimman/docs`,
+        name: `suthep-docs`,
+        path: `${__dirname}/content/suthep/docs`,
       },
     },
     `gatsby-plugin-postcss`,

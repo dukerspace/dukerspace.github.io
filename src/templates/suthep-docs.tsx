@@ -1,11 +1,11 @@
 import React from 'react'
 import { graphql, PageProps, Link } from 'gatsby'
 import DefaultLayout from '../components/Layout/DefaultLayout'
-import NimmanDocs from '../components/Sidebar/NimmanDocs'
+import SuthepDocs from '../components/Sidebar/SuthepDocs'
 import parse from 'html-react-parser'
 import '../pages/the-notebook.css'
 
-interface NimmanDocsTemplateProps extends PageProps {
+interface SuthepDocsTemplateProps extends PageProps {
   data: {
     content: {
       frontmatter: {
@@ -18,20 +18,20 @@ interface NimmanDocsTemplateProps extends PageProps {
   }
 }
 
-const NimmanDocsTemplate: React.FC<NimmanDocsTemplateProps> = (props) => {
+const SuthepDocsTemplate: React.FC<SuthepDocsTemplateProps> = (props) => {
   const post = props.data.content
   return (
     <DefaultLayout>
       <div>
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
           <div className="md:col-span-4">
-            <NimmanDocs />
+            <SuthepDocs />
           </div>
           <div className="md:col-span-8">
             <div className="notebook-content">
               <div className="mb-4">
-                <Link to="/project/nimman" className="text-blue-500 hover:text-blue-700">
-                  ← Back to Nimman
+                <Link to="/project/suthep" className="text-blue-500 hover:text-blue-700">
+                  ← Back to Suthep
                 </Link>
               </div>
               <article className="notebook-article">
@@ -45,7 +45,7 @@ const NimmanDocsTemplate: React.FC<NimmanDocsTemplateProps> = (props) => {
   )
 }
 
-export default NimmanDocsTemplate
+export default SuthepDocsTemplate
 
 export const query = graphql`
   query($pathSlug: String!) {
@@ -59,3 +59,4 @@ export const query = graphql`
     }
   }
 `
+

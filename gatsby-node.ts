@@ -45,7 +45,7 @@ export const createPages: GatsbyNode['createPages'] = ({ graphql, actions }) => 
 
     const blogPost = path.resolve(`./src/templates/blog.tsx`)
     const theNotebookPost = path.resolve(`./src/templates/the-notebook.tsx`)
-    const nimmanDocsPost = path.resolve(`./src/templates/nimman-docs.tsx`)
+    const suthepDocsPost = path.resolve(`./src/templates/suthep-docs.tsx`)
 
     const blogs = result.data.allMarkdownRemark.edges.filter(
       ({ node }: any) => node.frontmatter.type === 'blog'
@@ -53,8 +53,8 @@ export const createPages: GatsbyNode['createPages'] = ({ graphql, actions }) => 
     const theNotebook = result.data.allMarkdownRemark.edges.filter(
       ({ node }: any) => node.frontmatter.type === 'docs'
     )
-    const nimmanDocs = result.data.allMarkdownRemark.edges.filter(
-      ({ node }: any) => node.frontmatter.type === 'nimman-docs'
+    const suthepDocs = result.data.allMarkdownRemark.edges.filter(
+      ({ node }: any) => node.frontmatter.type === 'suthep-docs'
     )
 
     blogs.forEach(({ node }: any) => {
@@ -79,11 +79,11 @@ export const createPages: GatsbyNode['createPages'] = ({ graphql, actions }) => 
       })
     })
 
-    nimmanDocs.forEach(({ node }: any) => {
+    suthepDocs.forEach(({ node }: any) => {
       const pagePath = node.frontmatter.path
       createPage({
         path: pagePath,
-        component: nimmanDocsPost,
+        component: suthepDocsPost,
         context: {
           pathSlug: pagePath
         }
