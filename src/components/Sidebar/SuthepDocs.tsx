@@ -1,7 +1,6 @@
 import React from 'react'
 import { useStaticQuery, graphql, Link } from 'gatsby'
 import { useLocation } from '@reach/router'
-import './TheNotebook.css'
 
 const SuthepDocs: React.FC = () => {
   const location = useLocation()
@@ -85,26 +84,20 @@ const SuthepDocs: React.FC = () => {
   }) : []
 
   return (
-    <nav className="notebook-sidebar">
-      <div className="notebook-sidebar__header">
-        <h2 className="notebook-sidebar__title">Suthep Docs</h2>
-        <div className="notebook-sidebar__divider"></div>
+    <nav>
+      <div className="vitepress-sidebar__header">
+        <h2 className="vitepress-sidebar__title">Documentation</h2>
       </div>
-      <ul className="notebook-sidebar__list">
+      <ul className="vitepress-sidebar__list">
         {sortedDocs.map(({ node }, index) => {
           const active = isActive(node.frontmatter.path)
           return (
-            <li key={index} className="notebook-sidebar__item">
+            <li key={index} className="vitepress-sidebar__item">
               <Link
                 to={node.frontmatter.path}
-                className={`notebook-sidebar__link ${active ? 'notebook-sidebar__link--active' : ''}`}
+                className={`vitepress-sidebar__link ${active ? 'vitepress-sidebar__link--active' : ''}`}
               >
-                <span className="notebook-sidebar__link-text">
-                  {node.frontmatter.title}
-                </span>
-                {active && (
-                  <span className="notebook-sidebar__link-indicator"></span>
-                )}
+                {node.frontmatter.title}
               </Link>
             </li>
           )
