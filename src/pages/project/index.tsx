@@ -19,6 +19,15 @@ const ProjectPage: React.FC = () => (
             </p>
           </div>
 
+          <div className="my-8">
+            <h2>Fourcuz</h2>
+            <p>
+              <Link to="/project/fourcuz">
+                Pomodoro Task Manager - Focus + Tasks in a clean, distraction-free web app
+              </Link>
+            </p>
+          </div>
+
           <hr />
         </article>
       </div>
