@@ -74,7 +74,7 @@ const IndexPage: React.FC = () => (
               Hello there! I'm <span className="text-[#ec5990]">Montol</span>
             </h1>
             <p className="hero-description">
-              Software Engineer from <span className="text-[#ec5990]">Thailand</span>
+              Software Engineer from <span className="text-[#ec5990]">Chaing Mai,Thailand</span>
             </p>
           </div>
         </div>
@@ -130,7 +130,7 @@ const IndexPage: React.FC = () => (
             </div>
             <div className="project-links">
               <a
-                href="https://fourcuz-web.pages.dev/"
+                href="https://fourcuz.dukerspace.com/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="project-link"

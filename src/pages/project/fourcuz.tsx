@@ -1,12 +1,12 @@
 import React from 'react'
+import fourcuz from '../../assets/images/fourcuz.png'
 import DefaultLayout from '../../components/Layout/DefaultLayout'
 import '../the-notebook.css'
-import fourcuz from '../../assets/images/fourcuz.png'
 
 const FourcuzPage: React.FC = () => {
   // Using a thumbnail service to generate preview image from the website
   // This service creates a screenshot thumbnail of the live site
-  const thumbnailUrl = `https://image.thum.io/get/width/1200/crop/600/https://fourcuz-web.pages.dev/`
+  const thumbnailUrl = `https://image.thum.io/get/width/1200/crop/600/https://fourcuz.dukerspace.com/`
 
   return (
     <DefaultLayout>
@@ -21,7 +21,7 @@ const FourcuzPage: React.FC = () => {
             {/* Thumbnail/Preview Image */}
             <div className="my-8 text-center">
               <a
-                href="https://fourcuz-web.pages.dev/"
+                href="https://fourcuz.dukerspace.com/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block"
@@ -38,49 +38,49 @@ const FourcuzPage: React.FC = () => {
                 />
               </a>
               <p className="text-sm text-gray-500 mt-2">
-                Click image to visit live site: <a 
-                  href="https://fourcuz-web.pages.dev/" 
-                  target="_blank" 
+                Click image to visit live site: <a
+                  href="https://fourcuz.dukerspace.com/"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="text-blue-400 hover:underline"
                 >
-                  https://fourcuz-web.pages.dev/
+                  https://fourcuz.dukerspace.com/
                 </a>
               </p>
             </div>
-            
+
             <h2>About</h2>
             <p>
-              Fourcuz is a clean and minimal Pomodoro task manager web application designed to help 
-              you stay focused and productive. It combines the proven Pomodoro Technique with 
-              intuitive task management, allowing you to track your work in focused intervals 
+              Fourcuz is a clean and minimal Pomodoro task manager web application designed to help
+              you stay focused and productive. It combines the proven Pomodoro Technique with
+              intuitive task management, allowing you to track your work in focused intervals
               without distractions. Your data stays local and private—no signup required.
             </p>
 
             <h2>Key Features</h2>
             <ul>
               <li>
-                <strong>Pomodoro Timer</strong> - Customizable timer durations with break intervals 
+                <strong>Pomodoro Timer</strong> - Customizable timer durations with break intervals
                 to maintain focus and prevent burnout
               </li>
               <li>
-                <strong>Task Management</strong> - Create, edit, and organize tasks with subtasks, 
+                <strong>Task Management</strong> - Create, edit, and organize tasks with subtasks,
                 priorities, and due dates
               </li>
               <li>
-                <strong>Statistics & Insights</strong> - Track your productivity with daily, 
+                <strong>Statistics & Insights</strong> - Track your productivity with daily,
                 weekly, and monthly focus time and task completion statistics
               </li>
               <li>
-                <strong>Local Data Storage</strong> - All your data is stored locally in your browser— 
+                <strong>Local Data Storage</strong> - All your data is stored locally in your browser—
                 no account needed, complete privacy
               </li>
               <li>
-                <strong>Dark/Light Mode</strong> - Toggle between themes for comfortable viewing 
+                <strong>Dark/Light Mode</strong> - Toggle between themes for comfortable viewing
                 in any lighting condition
               </li>
               <li>
-                <strong>Mobile Responsive</strong> - Works seamlessly on desktop, tablet, and 
+                <strong>Mobile Responsive</strong> - Works seamlessly on desktop, tablet, and
                 mobile devices
               </li>
               <li>
@@ -100,7 +100,7 @@ const FourcuzPage: React.FC = () => {
             <h2>Why Use Fourcuz</h2>
             <ul>
               <li>
-                <strong>Fight Procrastination</strong> - The Pomodoro Technique helps break work 
+                <strong>Fight Procrastination</strong> - The Pomodoro Technique helps break work
                 into manageable chunks
               </li>
               <li>
@@ -119,21 +119,21 @@ const FourcuzPage: React.FC = () => {
 
             <h2>Technology</h2>
             <p>
-              Fourcuz is built as a modern web application using React and optimized for performance. 
-              It leverages browser localStorage for data persistence and responsive design principles 
+              Fourcuz is built as a modern web application using React and optimized for performance.
+              It leverages browser localStorage for data persistence and responsive design principles
               for cross-device compatibility.
             </p>
 
             <div className="mt-8">
               <p>
                 <strong>Live Application:</strong>{' '}
-                <a 
-                  href="https://fourcuz-web.pages.dev/" 
-                  target="_blank" 
+                <a
+                  href="https://fourcuz.dukerspace.com/"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="text-blue-400 hover:underline"
                 >
-                  https://fourcuz-web.pages.dev/
+                  https://fourcuz.dukerspace.com/
                 </a>
               </p>
             </div>
