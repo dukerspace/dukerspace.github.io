@@ -1,5 +1,5 @@
-import React from 'react'
 import { Link } from 'gatsby'
+import React from 'react'
 import DefaultLayout from '../../components/Layout/DefaultLayout'
 import '../the-notebook.css'
 
@@ -9,7 +9,7 @@ const ProjectPage: React.FC = () => (
       <div className="notebook-content">
         <article className="notebook-article">
           <h1>Personal Projects</h1>
-          
+
           <div className="my-8">
             <h2>Suthep</h2>
             <p>
