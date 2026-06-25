@@ -25,20 +25,20 @@ const config: GatsbyConfig = {
         path: `${__dirname}/content/the-notebook/files`,
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `the-notebook`,
-        path: `${__dirname}/content/the-notebook`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `suthep-docs`,
-        path: `${__dirname}/content/suthep/docs`,
-      },
-    },
+		{
+			resolve: `gatsby-source-filesystem`,
+			options: {
+				name: `blog`,
+				path: `${__dirname}/content/blog`,
+			},
+		},
+		{
+			resolve: `gatsby-source-filesystem`,
+			options: {
+				name: `the-notebook`,
+				path: `${__dirname}/content/the-notebook`,
+			},
+		},
     `gatsby-plugin-postcss`,
     {
       resolve: `gatsby-transformer-remark`,
