@@ -1,0 +1,23 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Typecheck apps/api",
+			"type": "shell",
+			"command": "pnpm",
+			"args": [
+				"--dir",
+				"apps/api",
+				"tsc",
+				"-p",
+				"tsconfig.json",
+				"--noEmit"
+			],
+			"isBackground": false,
+			"problemMatcher": [
+				"$tsc"
+			],
+			"group": "build"
+		}
+	]
+}

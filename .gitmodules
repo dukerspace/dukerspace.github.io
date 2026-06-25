@@ -1,6 +1,3 @@
 [submodule "notebook"]
 	path = content/the-notebook
 	url = https://github.com/dukerspace/the-notebook
-[submodule "nimman"]
-	path = content/nimman
-	url = https://github.com/dukerspace/nimman

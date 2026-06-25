@@ -1,135 +1,207 @@
-import React from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { faEnvelope, faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { Link } from 'gatsby'
+import React from 'react'
 
 import DefaultLayout from '../components/Layout/DefaultLayout'
-import profile from '../assets/images/profile.jpg'
 import './index.css'
+
+const monthNames: { [key: string]: number } = {
+  January: 0, February: 1, March: 2, April: 3, May: 4, June: 5,
+  July: 6, August: 7, September: 8, October: 9, November: 10, December: 11
+}
+
+const calculateDuration = (dateRange: string): string => {
+  const isPresent = dateRange.includes('Present')
+  const parts = dateRange.split(' - ')
+
+  if (parts.length !== 2) return ''
+
+  const startStr = parts[0].trim()
+  const endStr = parts[1].trim()
+
+  const startMatch = startStr.match(/(\w+)\s+(\d{4})/)
+  if (!startMatch) return ''
+
+  const startMonth = monthNames[startMatch[1]]
+  const startYear = parseInt(startMatch[2])
+
+  let endMonth: number
+  let endYear: number
+
+  if (isPresent) {
+    const now = new Date()
+    endMonth = now.getMonth()
+    endYear = now.getFullYear()
+  } else {
+    const endMatch = endStr.match(/(\w+)\s+(\d{4})/)
+    if (!endMatch) return ''
+    endMonth = monthNames[endMatch[1]]
+    endYear = parseInt(endMatch[2])
+  }
+
+  let years = endYear - startYear
+  let months = endMonth - startMonth + 1
+
+  if (months < 0) {
+    years--
+    months += 12
+  }
+
+  if (months >= 12) {
+    years += Math.floor(months / 12)
+    months = months % 12
+  }
+
+  if (years === 0) {
+    return `( ~ ${months} ${months === 1 ? 'month' : 'months'})`
+  } else if (months === 0) {
+    return `( ~ ${years} ${years === 1 ? 'year' : 'years'})`
+  } else {
+    return `( ~ ${years} ${years === 1 ? 'year' : 'years'} ${months} ${months === 1 ? 'month' : 'months'})`
+  }
+}
 
 const IndexPage: React.FC = () => (
   <DefaultLayout>
-    <div className="resume-container">
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-4">
-        {/* Profile Section */}
-        <div className="lg:col-span-4 mb-4">
-          <div className="profile-section">
-            <img
-              className="w-full max-w-[200px] rounded-full profile"
-              src={profile}
-              alt="Montol Saklor"
-            />
-            <h1>Montol Saklor</h1>
-            <p className="title">Software Engineer</p>
-            <div className="social-links">
+    <div className="portfolio-container">
+      {/* Hero Section */}
+      <section className="hero-section">
+        <div className="hero-content">
+          <div className="hero-intro">
+            <h1 className="hero-title">
+              Hello there! I'm <span className="text-[#ec5990]">Montol</span>
+            </h1>
+            <p className="hero-description">
+              Software Engineer from <span className="text-[#ec5990]">Chaing Mai,Thailand</span>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Projects Section */}
+      <section className="section">
+        <h2 className="section-title">Personal Projects</h2>
+        <div className="projects-grid">
+          <div className="project-card">
+            <div className="project-header">
+              <h3 className="project-title">Suthep</h3>
+              <span className="project-badge">Personal project</span>
+            </div>
+            <p className="project-description">
+              Deployment tool for Docker with automatic Nginx reverse proxy and HTTPS
+            </p>
+            <div className="project-tags">
+              <span>TypeScript</span>
+              <span>Docker</span>
+              <span>Nginx</span>
+              <span>Certbot</span>
+            </div>
+            <div className="project-links">
               <a
-                href="https://www.linkedin.com/in/montol-saklor-381657177"
-                aria-label="LinkedIn"
+                href="https://github.com/dukerspace/suthep"
                 target="_blank"
                 rel="noopener noreferrer"
-              >
-                <FontAwesomeIcon icon={faLinkedinIn} />
-              </a>
-              <a
-                href="https://github.com/dukerspace"
-                aria-label="GitHub"
-                target="_blank"
-                rel="noopener noreferrer"
+                className="project-link"
               >
                 <FontAwesomeIcon icon={faGithub} />
+                GitHub
               </a>
+              <Link to="/project/suthep" className="project-link">
+                <FontAwesomeIcon icon={faExternalLinkAlt} />
+                Details
+              </Link>
+            </div>
+          </div>
+
+          <div className="project-card">
+            <div className="project-header">
+              <h3 className="project-title">Fourcuz</h3>
+              <span className="project-badge">Personal project</span>
+            </div>
+            <p className="project-description">
+              Pomodoro Task Manager - Focus + Tasks in a clean, distraction-free web app
+            </p>
+            <div className="project-tags">
+              <span>React</span>
+              <span>TypeScript</span>
+              <span>TailwindCSS</span>
+            </div>
+            <div className="project-links">
               <a
-                href="mailto:montolsaklor@gmail.com"
-                aria-label="Email"
+                href="https://fourcuz.dukerspace.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="project-link"
               >
-                <FontAwesomeIcon icon={faEnvelope} />
+                <FontAwesomeIcon icon={faExternalLinkAlt} />
+                Website
               </a>
+              <Link to="/project/fourcuz" className="project-link">
+                <FontAwesomeIcon icon={faExternalLinkAlt} />
+                Details
+              </Link>
             </div>
           </div>
         </div>
+      </section>
 
-        {/* Main Content */}
-        <div className="lg:col-span-8">
-          {/* Education Section */}
-          <div className="resume-section">
-            <h2>Education</h2>
-            <div className="resume-item">
-              <h4>Modern Management and Information Technology</h4>
-              <p className="date">2010 - 2014</p>
-              <p className="company">College of Art, Media and Technology</p>
-              <p>Chiang Mai University</p>
-            </div>
-          </div>
 
-          <hr />
-
-          {/* Experience Section */}
-          <div className="resume-section">
-            <h2>Experience</h2>
-            
-            <div className="resume-item">
-              <h4>Software Developer</h4>
-              <p className="date">December 2021 - Present</p>
-              <p className="company">BANPU Public Company Limited</p>
-            </div>
-            
-            <div className="resume-item">
-              <h4>Software Developer</h4>
-              <p className="date">May 2020 - December 2021</p>
-              <p className="company">Artisan Digital Asia</p>
-            </div>
-
-            <div className="resume-item">
-              <h4>Software Engineer</h4>
-              <p className="date">December 2017 - May 2020</p>
-              <p className="company">Aware Corporation Ltd.</p>
-            </div>
-
-            <div className="resume-item">
-              <h4>Software Engineer</h4>
-              <p className="date">June 2016 - November 2017</p>
-              <p className="company">Tradition Brokers (Thailand) Limited</p>
-            </div>
-
-            <div className="resume-item">
-              <h4>PHP Developer</h4>
-              <p className="date">June 2015 - September 2015</p>
-              <p className="company">Intsia Co.,Ltd</p>
-            </div>
-
-            <div className="resume-item">
-              <h4>Internship Marketing</h4>
-              <p className="date">March 2013 - May 2013</p>
-              <p className="company">True Corporation Public Company</p>
-            </div>
-          </div>
-
-          <hr />
-
-          {/* Skills Section */}
-          <div className="resume-section">
-            <h2>Skills</h2>
-            <div className="skills-container">
-              <span className="badge-pink">Go Lang</span>
-              <span className="badge-pink">TypeScript</span>
-              <span className="badge-pink">GraphQL</span>
-              <span className="badge-pink">React.js</span>
-              <span className="badge-pink">Node.js</span>
-              <span className="badge-pink">PHP</span>
-              <span className="badge-pink">Laravel</span>
-              <span className="badge-pink">Docker</span>
-              <span className="badge-pink">Git</span>
-              <span className="badge-pink">HTML</span>
-              <span className="badge-pink">CSS</span>
-              <span className="badge-pink">SQL</span>
-              <span className="badge-pink">PostgreSQL</span>
-              <span className="badge-pink">MySQL</span>
-              <span className="badge-pink">Linux</span>
-              <span className="badge-pink">Cloud Services</span>
-            </div>
-          </div>
+      {/* Skills Section */}
+      <section className="section">
+        <h2 className="section-title">Skills</h2>
+        <div className="skills-grid">
+          <span className="skill-tag">Go Lang</span>
+          <span className="skill-tag">TypeScript</span>
+          <span className="skill-tag">GraphQL</span>
+          <span className="skill-tag">React.js</span>
+          <span className="skill-tag">Node.js</span>
+          <span className="skill-tag">PHP</span>
+          <span className="skill-tag">Laravel</span>
+          <span className="skill-tag">Docker</span>
+          <span className="skill-tag">Git</span>
+          <span className="skill-tag">PostgreSQL</span>
+          <span className="skill-tag">MySQL</span>
+          <span className="skill-tag">Linux</span>
         </div>
-      </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="section">
+        <h2 className="section-title">Contact</h2>
+        <p className="contact-text">Got an idea? Let's connect!</p>
+        <div className="contact-links">
+          <a
+            href="mailto:montolsaklor@gmail.com"
+            className="contact-link"
+            aria-label="Email"
+          >
+            <FontAwesomeIcon icon={faEnvelope} />
+            Email
+          </a>
+          <a
+            href="https://github.com/dukerspace"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="contact-link"
+            aria-label="GitHub"
+          >
+            <FontAwesomeIcon icon={faGithub} />
+            GitHub
+          </a>
+          <a
+            href="https://www.linkedin.com/in/montol-saklor-381657177"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="contact-link"
+            aria-label="LinkedIn"
+          >
+            <FontAwesomeIcon icon={faLinkedinIn} />
+            LinkedIn
+          </a>
+        </div>
+      </section>
     </div>
   </DefaultLayout>
 )

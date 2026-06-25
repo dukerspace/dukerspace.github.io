@@ -2,7 +2,7 @@
   "name": "dukerspace.github.io",
   "private": true,
   "description": "Profile web site",
-  "version": "0.3.2",
+  "version": "1.0.0",
   "author": "Montol Saklor <montolsaklor@gmail.com>",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "7.1.0",
@@ -46,7 +46,7 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "deploy": "gatsby build --prefix-paths && cp ./src/CNAME public/ && gh-pages -d public -b gh-pages",
+    "deploy": "gatsby clean && gatsby build && cp ./src/CNAME public/ && gh-pages -d public -b gh-pages",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",

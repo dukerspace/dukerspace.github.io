@@ -1,5 +1,5 @@
-import React from 'react'
 import { Link } from 'gatsby'
+import React from 'react'
 import DefaultLayout from '../../components/Layout/DefaultLayout'
 import '../the-notebook.css'
 
@@ -9,12 +9,21 @@ const ProjectPage: React.FC = () => (
       <div className="notebook-content">
         <article className="notebook-article">
           <h1>Personal Projects</h1>
-          
+
           <div className="my-8">
-            <h2>Nimman</h2>
+            <h2>Suthep</h2>
             <p>
-              <Link to="/project/nimman">
-                Zero-downtime deployment tool for Node.js and Bun projects
+              <Link to="/project/suthep">
+                Deployment tool for Docker with automatic Nginx reverse proxy and HTTPS
+              </Link>
+            </p>
+          </div>
+
+          <div className="my-8">
+            <h2>Fourcuz</h2>
+            <p>
+              <Link to="/project/fourcuz">
+                Pomodoro Task Manager - Focus + Tasks in a clean, distraction-free web app
               </Link>
             </p>
           </div>
