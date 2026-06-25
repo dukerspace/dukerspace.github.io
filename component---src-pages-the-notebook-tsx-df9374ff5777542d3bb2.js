@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkdukerspace_github_io=self.webpackChunkdukerspace_github_io||[]).push([[454],{8406:function(e,t,a){a.r(t);var l=a(6540),n=a(5480),c=a(900);t.default=e=>{let{data:t}=e;return l.createElement(n.A,null,l.createElement("div",null,l.createElement("div",{className:"notebook-content"},l.createElement("article",{className:"notebook-article"},(0,c.Ay)(t.content.html)))))}}}]);
-//# sourceMappingURL=component---src-pages-the-notebook-tsx-df9374ff5777542d3bb2.js.map
