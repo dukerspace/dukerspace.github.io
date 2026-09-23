@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://dukerspace.com/sitemap.xml
+Sitemap: https://dukerspace.com/sitemap-index.xml
 Host: https://dukerspace.com

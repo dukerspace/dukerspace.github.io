@@ -1,0 +1,65 @@
+# DUKERSPACE
+
+> Personal portfolio of Montol Saklor (dukerspace), Software Engineer based in Chiang Mai, Thailand.
+
+Thai is the default locale at https://dukerspace.com
+English lives under the /en prefix at https://dukerspace.com/en
+
+## Identity
+
+- Name: Montol Saklor
+- Handle: dukerspace
+- Role: Software Engineer
+- Location: Chiang Mai, Thailand
+- Email: montolsaklor@gmail.com
+- GitHub: https://github.com/dukerspace
+- LinkedIn: https://www.linkedin.com/in/montol-saklor-381657177
+
+## Site map
+
+### Home
+- Thai: https://dukerspace.com
+- English: https://dukerspace.com/en
+- Software engineer portfolio — Montol Saklor. Personal projects including Muacle, Zla Labs, Suthep, and Fourcuz.
+
+### About Me
+- Thai: https://dukerspace.com/me
+- English: https://dukerspace.com/en/me
+- About Montol Saklor — software engineer based in Chiang Mai, Thailand. Education at Chiang Mai University; experience across software engineering roles.
+
+### Projects
+- Thai: https://dukerspace.com/projects
+- English: https://dukerspace.com/en/projects
+- Personal projects by Montol Saklor — Muacle, Zla Labs, Suthep, and Fourcuz.
+
+### Muacle
+- Thai: https://dukerspace.com/projects/muacle
+- English: https://dukerspace.com/en/projects/muacle
+- Live: https://muacle.com/
+- AI-powered online fortune-telling and zodiac platform.
+
+### Zla Labs
+- Thai: https://dukerspace.com/projects/zlalabs
+- English: https://dukerspace.com/en/projects/zlalabs
+- Live: https://www.zlalabs.com/
+- GitHub org: https://github.com/zlalabs
+- Software lab based in Thailand building open-source tools and product experiments.
+
+### Suthep
+- Thai: https://dukerspace.com/projects/suthep
+- English: https://dukerspace.com/en/projects/suthep
+- GitHub: https://github.com/dukerspace/suthep
+- Docs (EN): https://dukerspace.github.io/suthep/
+- Docs (TH): https://dukerspace.github.io/suthep/th/
+- Deployment tool for Docker with automatic Nginx reverse proxy and HTTPS.
+
+### Fourcuz
+- Thai: https://dukerspace.com/projects/fourcuz
+- English: https://dukerspace.com/en/projects/fourcuz
+- Live: https://fourcuz.dukerspace.com/
+- Pomodoro Task Manager — focus + tasks in a clean, distraction-free web app.
+
+## Optional
+
+- Sitemap: https://dukerspace.com/sitemap-index.xml
+- This file: https://dukerspace.com/llms.txt
