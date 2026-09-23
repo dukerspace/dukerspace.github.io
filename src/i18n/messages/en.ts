@@ -43,7 +43,6 @@ export const en = {
   'me.university': 'Chiang Mai University',
   'me.experience': 'Experience',
   'me.skills': 'Skills',
-  'me.role.softwareDeveloper': 'Software Developer',
   'me.role.softwareEngineer': 'Software Engineer',
   'me.role.phpDeveloper': 'PHP Developer',
   'me.role.internshipMarketing': 'Internship Marketing',

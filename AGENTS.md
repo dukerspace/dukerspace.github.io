@@ -10,13 +10,14 @@ Shared agent instructions for this repo. One source of truth for:
 
 ## Design
 
-UI and visual work: follow [DESIGN.md](./DESIGN.md).
+UI and visual work: follow [DESIGN.md](./DESIGN.md) as the site source of truth (Midnight Signal palette, Inter, single pink accent). The frontend-design skill guides craft quality; DESIGN.md overrides brand choices.
 
 ## Guidelines
 
 - Behavioral baseline: [`.skills/rimping-guidelines/SKILL.md`](./.skills/rimping-guidelines/SKILL.md)
 - Karpathy guidelines: [`.skills/karpathy-guidelines/SKILL.md`](./.skills/karpathy-guidelines/SKILL.md)
 - Locale / translation: [`.skills/locale-translator/SKILL.md`](./.skills/locale-translator/SKILL.md)
+- Frontend / UI: [`.agents/skills/frontend-design/SKILL.md`](./.agents/skills/frontend-design/SKILL.md)
 
 ## Locale
 

@@ -6,7 +6,7 @@
 
 /* Portfolio Container */
 .portfolio-container {
-  @apply max-w-4xl mx-auto py-12 px-4;
+  @apply max-w-4xl mx-auto py-8;
   animation: fadeIn 0.5s ease-in;
 }
 
@@ -23,7 +23,7 @@
 
 /* Hero Section */
 .hero-section {
-  @apply mb-16;
+  @apply mb-12;
 }
 
 .hero-content {
@@ -31,15 +31,15 @@
 }
 
 .hero-intro {
-  @apply mb-6;
+  @apply mb-4;
 }
 
 .hero-title {
-  @apply text-5xl md:text-6xl font-bold text-white mb-3 leading-tight;
+  @apply text-5xl md:text-6xl font-bold text-white mb-2 leading-tight;
 }
 
 .hero-description {
-  @apply text-xl md:text-2xl text-[#b8c5d1] mb-6;
+  @apply text-lg md:text-xl text-[#b8c5d1] mb-4;
 }
 
 .hero-bio {
@@ -49,16 +49,16 @@
 
 /* Section Styles */
 .section {
-  @apply mb-16;
+  @apply mb-12;
 }
 
 .section-title {
-  @apply text-3xl font-semibold text-white mb-8;
+  @apply text-3xl font-semibold text-white mb-6;
 }
 
 /* Projects Grid */
 .projects-grid {
-  @apply grid grid-cols-1 md:grid-cols-2 gap-6;
+  @apply grid grid-cols-1 md:grid-cols-2 gap-4;
 }
 
 .project-card {
@@ -74,7 +74,7 @@
 }
 
 .project-body {
-  @apply p-6;
+  @apply p-5;
 }
 
 .project-header {
@@ -90,7 +90,7 @@
 }
 
 .project-description {
-  @apply text-[#b8c5d1] mb-4 text-sm leading-relaxed;
+  @apply text-[#b8c5d1] mb-4 text-base leading-relaxed;
 }
 
 .project-tags {
@@ -115,15 +115,15 @@
 
 /* Experience List */
 .experience-list {
-  @apply space-y-6;
+  @apply space-y-4;
 }
 
 .experience-item {
-  @apply border-l-2 border-[#ec5990] pl-6 pb-6 last:pb-0;
+  @apply border-l-2 border-[#ec5990] pl-5 pb-4 last:pb-0;
 }
 
 .experience-role {
-  @apply text-lg font-semibold text-white mb-1;
+  @apply text-base font-semibold text-white mb-1;
 }
 
 .experience-date {
@@ -136,11 +136,11 @@
 
 /* Education */
 .education-item {
-  @apply border-l-2 border-[#ec5990] pl-6;
+  @apply border-l-2 border-[#ec5990] pl-5;
 }
 
 .education-degree {
-  @apply text-lg font-semibold text-white mb-1;
+  @apply text-base font-semibold text-white mb-1;
 }
 
 .education-date {
@@ -153,11 +153,11 @@
 
 /* Skills Grid */
 .skills-grid {
-  @apply flex flex-wrap gap-3;
+  @apply flex flex-wrap gap-2;
 }
 
 .skill-tag {
-  @apply px-4 py-2 bg-[#ec5990]/20 text-[#ec5990] rounded-full text-sm font-medium;
+  @apply px-3 py-1.5 bg-[#ec5990]/20 text-[#ec5990] rounded-full text-sm font-medium;
 }
 
 /* Contact Section */
@@ -176,7 +176,7 @@
 /* Responsive */
 @media (max-width: 768px) {
   .portfolio-container {
-    @apply py-8 px-4;
+    @apply py-6;
   }
 
   .hero-title {
@@ -184,7 +184,7 @@
   }
 
   .hero-description {
-    @apply text-lg;
+    @apply text-base;
   }
 
   .hero-bio {
@@ -192,7 +192,7 @@
   }
 
   .section-title {
-    @apply text-2xl mb-6;
+    @apply text-2xl mb-5;
   }
 
   .projects-grid {

@@ -23,7 +23,7 @@ const DefaultLayout: React.FC<DefaultLayoutProps> = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <div className="main container mx-auto px-4">{children}</div>
+      <div className="main container mx-auto">{children}</div>
       <Footer />
     </>
   )

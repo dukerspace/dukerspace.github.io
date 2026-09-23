@@ -60,7 +60,7 @@ We do not use heavy shadows to create "pop"; we use opacity lifts on navy.
 *   **Brand wordmark:** White; hover Signal Pink, no underline.
 
 ### Cards & Projects
-*   **Project card:** `bg-white/5`, `border-white/15`, `rounded-lg`, padding scale ~1.5rem. Hover: `bg-white/10`, `duration-300`.
+*   **Project card:** `bg-white/5`, `border-white/15`, `rounded-lg`, padding `p-5` (~1.25rem). Hover: `bg-white/10`, `duration-300`.
 *   **Badge:** Pink wash background (`#ec5990` / 20%) with pink text; small radius.
 *   **Tags:** `white/5` well, mist text—not bordered chips in a second color.
 
@@ -72,9 +72,11 @@ We do not use heavy shadows to create "pop"; we use opacity lifts on navy.
 *   Background: pink wash (`#ec5990` / 20%). Text: `#ec5990`. Shape: `rounded-full`.
 
 ### Layout Shell
-*   **Header:** Sticky, navy, bottom hairline `white/15`, `z-[1000]`.
-*   **Main:** Max width ~1200px; portfolio content `max-w-4xl`, centered, `py-12 px-4`.
-*   **Footer:** Top hairline `white/15`, mist meta text, pink links.
+*   **Header:** Sticky, navy, bottom hairline `white/15`, `z-[1000]`, vertical padding `py-4`.
+*   **Main:** Max width ~1200px; portfolio content `max-w-4xl`, centered, `py-8` (mobile `py-6`); horizontal padding from the shell (`px-4`).
+*   **Sections:** Separate with `mb-12`, not colored bands. Section titles use `mb-6`.
+*   **Cards / skills:** Project cards `p-5`, grid `gap-4`. Skill chips `px-3 py-1.5`, wrap `gap-2`.
+*   **Footer:** Top hairline `white/15`, `py-6 mt-12`, mist meta text, pink links.
 *   **Motion:** Page fade-in `0.5s ease-in` with slight `translateY(10px)`; hover transitions `200–300ms`.
 
 ---
@@ -82,7 +84,7 @@ We do not use heavy shadows to create "pop"; we use opacity lifts on navy.
 ## 6. Do’s and Don’ts
 
 ### Do:
-*   **Keep the navy ground continuous.** Separate sections with spacing (`mb-16`), not colored bands.
+*   **Keep the navy ground continuous.** Separate sections with spacing (`mb-12`), not colored bands.
 *   **Spend pink sparingly.** Use it for names, links, rails, and status—not large fills.
 *   **Prefer tokens.** Define colors in `:root` / `@theme inline` (`src/styles/globals.css`) before hardcoding hex in components.
 *   **Use mist for secondary copy** (`#b8c5d1`) so white stays hierarchical.

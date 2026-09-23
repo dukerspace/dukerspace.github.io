@@ -45,7 +45,6 @@ export const th: Record<MessageKey, string> = {
   'me.university': 'มหาวิทยาลัยเชียงใหม่',
   'me.experience': 'ประสบการณ์',
   'me.skills': 'ทักษะ',
-  'me.role.softwareDeveloper': 'นักพัฒนาซอฟต์แวร์',
   'me.role.softwareEngineer': 'วิศวกรซอฟต์แวร์',
   'me.role.phpDeveloper': 'นักพัฒนา PHP',
   'me.role.internshipMarketing': 'ฝึกงานฝ่ายการตลาด',

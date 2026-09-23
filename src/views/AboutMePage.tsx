@@ -20,13 +20,13 @@ const AboutMePage: React.FC = () => {
 
   const jobs = [
     {
-      role: t('me.role.softwareDeveloper'),
+      role: t('me.role.softwareEngineer'),
       date: t('me.date.banpu'),
       range: experienceRanges.banpu,
       company: t('me.company.banpu'),
     },
     {
-      role: t('me.role.softwareDeveloper'),
+      role: t('me.role.softwareEngineer'),
       date: t('me.date.artisan'),
       range: experienceRanges.artisan,
       company: t('me.company.artisan'),
