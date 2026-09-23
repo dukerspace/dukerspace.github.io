@@ -80,12 +80,20 @@ function SEO({
       content: `website`,
     },
     {
+      property: `og:site_name`,
+      content: siteTitle,
+    },
+    {
       property: `og:url`,
       content: canonical,
     },
     {
       property: `og:locale`,
       content: lang === 'en' ? 'en_US' : 'th_TH',
+    },
+    {
+      property: `og:locale:alternate`,
+      content: lang === 'en' ? 'th_TH' : 'en_US',
     },
     {
       property: `og:image`,
