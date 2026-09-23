@@ -2,9 +2,15 @@
   dukerspace.com
 </h1>
 
-## Starter
-- Use node v12
-## pull submodule
+## Getting started
+
 ```
-git submodule update --init --recursive
+npm install
+npm start
+```
+
+## Deploy
+
+```
+npm run deploy
 ```

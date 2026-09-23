@@ -62,7 +62,19 @@
 }
 
 .project-card {
-  @apply bg-white/5 border border-white/15 rounded-lg p-6 hover:bg-white/10 transition-all duration-300;
+  @apply overflow-hidden rounded-lg border border-white/15 bg-white/5 transition-all duration-300 hover:bg-white/10;
+}
+
+.project-media {
+  @apply aspect-video w-full overflow-hidden bg-[#0b1020];
+}
+
+.project-media img {
+  @apply h-full w-full object-cover;
+}
+
+.project-body {
+  @apply p-6;
 }
 
 .project-header {
@@ -149,10 +161,6 @@
 }
 
 /* Contact Section */
-.contact-text {
-  @apply text-[#b8c5d1] mb-4;
-}
-
 .contact-links {
   @apply flex flex-wrap gap-4;
 }
