@@ -1,0 +1,147 @@
+{
+  "pages": [
+    {
+      "path": "/"
+    },
+    {
+      "path": "/projects"
+    },
+    {
+      "path": "/projects/suthep"
+    },
+    {
+      "path": "/projects/muacle"
+    },
+    {
+      "path": "/projects/fourcuz"
+    },
+    {
+      "path": "/projects/zlalabs"
+    },
+    {
+      "path": "/me"
+    },
+    {
+      "path": "/games"
+    },
+    {
+      "path": "/blog"
+    },
+    {
+      "path": "/project",
+      "sitemap": {
+        "exclude": true
+      }
+    },
+    {
+      "path": "/project/suthep",
+      "sitemap": {
+        "exclude": true
+      }
+    },
+    {
+      "path": "/project/muacle",
+      "sitemap": {
+        "exclude": true
+      }
+    },
+    {
+      "path": "/project/fourcuz",
+      "sitemap": {
+        "exclude": true
+      }
+    },
+    {
+      "path": "/project/zlalabs",
+      "sitemap": {
+        "exclude": true
+      }
+    },
+    {
+      "path": "/blog/starting-a-blog"
+    },
+    {
+      "path": "/en"
+    },
+    {
+      "path": "/en/projects",
+      "sitemap": {
+        "exclude": true
+      }
+    },
+    {
+      "path": "/en/projects/suthep",
+      "sitemap": {
+        "exclude": true
+      }
+    },
+    {
+      "path": "/en/projects/muacle",
+      "sitemap": {
+        "exclude": true
+      }
+    },
+    {
+      "path": "/en/projects/fourcuz",
+      "sitemap": {
+        "exclude": true
+      }
+    },
+    {
+      "path": "/en/projects/zlalabs",
+      "sitemap": {
+        "exclude": true
+      }
+    },
+    {
+      "path": "/en/me"
+    },
+    {
+      "path": "/en/games"
+    },
+    {
+      "path": "/en/blog"
+    },
+    {
+      "path": "/en/project",
+      "sitemap": {
+        "exclude": true
+      }
+    },
+    {
+      "path": "/en/project/suthep",
+      "sitemap": {
+        "exclude": true
+      }
+    },
+    {
+      "path": "/en/project/muacle",
+      "sitemap": {
+        "exclude": true
+      }
+    },
+    {
+      "path": "/en/project/fourcuz",
+      "sitemap": {
+        "exclude": true
+      }
+    },
+    {
+      "path": "/en/project/zlalabs",
+      "sitemap": {
+        "exclude": true
+      }
+    },
+    {
+      "path": "/en/blog/starting-a-blog"
+    },
+    {
+      "path": "/__spa-shell",
+      "sitemap": {
+        "exclude": true
+      }
+    }
+  ],
+  "host": "https://dukerspace.com",
+  "lastBuilt": "2026-10-21T20:23:06.840Z"
+}

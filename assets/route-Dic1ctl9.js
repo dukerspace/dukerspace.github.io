@@ -1,0 +1,1 @@
+import{o as e}from"./matchContext-facJj_9Y.js";import{d as t}from"./index-jraDkcpc.js";var n=e();function r(){return(0,n.jsx)(t,{})}export{r as component};

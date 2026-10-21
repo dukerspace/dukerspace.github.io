@@ -59,7 +59,17 @@ English lives under the /en prefix at https://dukerspace.com/en
 - Live: https://fourcuz.dukerspace.com/
 - Pomodoro Task Manager — focus + tasks in a clean, distraction-free web app.
 
+### Games
+- Thai: https://dukerspace.com/games
+- English: https://dukerspace.com/en/games
+- Party games on one phone: crocodile teeth, animal race, and dice.
+
+### Blog
+- Thai: https://dukerspace.com/blog
+- English: https://dukerspace.com/en/blog
+- Articles authored as Markdown in `content/blog/th` and `content/blog/en`.
+
 ## Optional
 
-- Sitemap: https://dukerspace.com/sitemap-index.xml
+- Sitemap: https://dukerspace.com/sitemap.xml
 - This file: https://dukerspace.com/llms.txt

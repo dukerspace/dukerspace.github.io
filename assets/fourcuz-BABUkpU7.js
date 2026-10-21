@@ -1,0 +1,1 @@
+var e=`/assets/fourcuz-Dr-4GGli.png`;export{e as t};
