@@ -1,12 +1,10 @@
-import React from 'react'
-
-import SEO from '../components/seo'
-import { localizedPath, type Locale } from '../i18n'
+import type { Locale } from '../i18n'
 import { translate } from '../i18n/LocaleContext'
 import type { MessageKey } from '../i18n/messages/en'
+import { pageHead } from '../components/seo'
 
-/** Head helper for locale pages — works outside LocaleProvider. */
-export function LocalizedHead({
+/** Head config for locale pages. */
+export function localizedHead({
   locale,
   path,
   titleKey,
@@ -21,17 +19,12 @@ export function LocalizedHead({
   titleTemplate?: string | null
   jsonLd?: Record<string, unknown> | Record<string, unknown>[]
 }) {
-  const pathname = localizedPath(path, locale)
-  return (
-    <SEO
-      title={translate(locale, titleKey)}
-      description={
-        descriptionKey ? translate(locale, descriptionKey) : undefined
-      }
-      lang={locale}
-      pathname={pathname}
-      titleTemplate={titleTemplate}
-      jsonLd={jsonLd}
-    />
-  )
+  return pageHead({
+    locale,
+    path,
+    title: translate(locale, titleKey),
+    description: descriptionKey ? translate(locale, descriptionKey) : undefined,
+    titleTemplate,
+    jsonLd,
+  })
 }

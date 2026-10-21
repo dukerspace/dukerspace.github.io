@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { Link } from '@tanstack/react-router'
 
 import { localizedPath } from '../../i18n'
 import { useLocale, useT } from '../../i18n/LocaleContext'
@@ -21,6 +21,9 @@ const Footer: React.FC = () => {
           </li>
           <li>
             <Link to={localizedPath('/projects', locale)}>{t('nav.projects')}</Link>
+          </li>
+          <li>
+            <Link to={localizedPath('/blog', locale)}>{t('nav.blog')}</Link>
           </li>
         </ul>
       </div>

@@ -33,3 +33,8 @@ export function localizedPath(path: string, locale: Locale): string {
 export function switchLocalePath(pathname: string, target: Locale): string {
   return localizedPath(stripLocale(pathname), target)
 }
+
+/** Locale route param: missing means Thai. Invalid values are rejected by the route. */
+export function localeFromParam(locale: string | undefined): Locale {
+  return locale === 'en' ? 'en' : 'th'
+}

@@ -2,7 +2,7 @@ import React from 'react'
 
 import DefaultLayout from '../components/Layout/DefaultLayout'
 import { useT } from '../i18n/LocaleContext'
-import '../pages/content-page.css'
+import '../styles/content-page.css'
 
 const SuthepPage: React.FC = () => {
   const t = useT()

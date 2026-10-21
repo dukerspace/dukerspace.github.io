@@ -7,7 +7,7 @@ import DefaultLayout from '../components/Layout/DefaultLayout'
 import profile from '../assets/images/profile.jpg'
 import { calculateDuration, experienceRanges } from '../i18n/duration'
 import { useT } from '../i18n/LocaleContext'
-import '../pages/index.css'
+import '../styles/index.css'
 
 const AboutMePage: React.FC = () => {
   const t = useT()

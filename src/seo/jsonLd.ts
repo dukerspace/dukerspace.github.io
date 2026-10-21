@@ -1,6 +1,7 @@
 import { localizedPath, type Locale } from '../i18n'
+import { site } from './site'
 
-const SITE_URL = 'https://dukerspace.com'
+const SITE_URL = site.siteUrl
 
 const SAME_AS = [
   'https://github.com/dukerspace',

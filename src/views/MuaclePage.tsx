@@ -3,7 +3,7 @@ import React from 'react'
 import DefaultLayout from '../components/Layout/DefaultLayout'
 import LiveSitePreview from '../components/LiveSitePreview'
 import { useT } from '../i18n/LocaleContext'
-import '../pages/content-page.css'
+import '../styles/content-page.css'
 
 const MuaclePage: React.FC = () => {
   const t = useT()

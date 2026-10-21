@@ -1,4 +1,4 @@
-import { Link } from 'gatsby'
+import { Link } from '@tanstack/react-router'
 import React from 'react'
 
 import { localizedPath, switchLocalePath } from '../../i18n'
@@ -20,7 +20,7 @@ const Header: React.FC<HeaderProps> = ({ siteTitle = '' }) => {
 
   return (
     <header>
-      <div className="container mx-auto px-4 flex items-center justify-between">
+      <div className="container mx-auto px-4 flex flex-wrap gap-3 items-center justify-between">
         <h1>
           <Link to={localizedPath('/', locale)}>{siteTitle}</Link>
         </h1>
@@ -30,6 +30,18 @@ const Header: React.FC<HeaderProps> = ({ siteTitle = '' }) => {
             className="text-[#b8c5d1] no-underline hover:text-[#ec5990] transition-colors"
           >
             {t('nav.projects')}
+          </Link>
+          <Link
+            to={localizedPath('/blog', locale)}
+            className="text-[#b8c5d1] no-underline hover:text-[#ec5990] transition-colors"
+          >
+            {t('nav.blog')}
+          </Link>
+          <Link
+            to={localizedPath('/games', locale)}
+            className="text-[#b8c5d1] no-underline hover:text-[#ec5990] transition-colors"
+          >
+            {t('nav.games')}
           </Link>
           <span className="flex items-center gap-1 text-sm" aria-label="Language">
             <Link to={thPath} className={locale === 'th' ? activeLang : idleLang}>
