@@ -1,7 +1,7 @@
 import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 import { faEnvelope, faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { Link } from 'gatsby'
+import { Link } from '@tanstack/react-router'
 import React from 'react'
 
 import fourcuz from '../assets/images/fourcuz.png'
@@ -10,7 +10,7 @@ import DefaultLayout from '../components/Layout/DefaultLayout'
 import LiveSitePreview from '../components/LiveSitePreview'
 import { localizedPath } from '../i18n'
 import { useLocale, useT } from '../i18n/LocaleContext'
-import '../pages/index.css'
+import '../styles/index.css'
 
 const HomePage: React.FC = () => {
   const t = useT()

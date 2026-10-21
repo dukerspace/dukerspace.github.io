@@ -39,4 +39,4 @@ Never ship a key that exists in only one locale.
 1. Every key in `th` exists in `en` and vice versa.
 2. Thai pages render at `/…`; English counterparts at `/en/…`.
 3. `html lang` is `th` or `en` to match the route; hreflang alternates present.
-4. `npm run build` succeeds with both locale trees in `public/`.
+4. `bun run build` succeeds with both locale trees in `dist/client/`.

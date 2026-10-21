@@ -1,8 +1,8 @@
 import React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
 
 import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
+import { site } from '../../seo/site'
 import './DefaultLayout.css'
 
 interface DefaultLayoutProps {
@@ -10,19 +10,9 @@ interface DefaultLayoutProps {
 }
 
 const DefaultLayout: React.FC<DefaultLayoutProps> = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
-
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
+      <Header siteTitle={site.title} />
       <div className="main container mx-auto">{children}</div>
       <Footer />
     </>
