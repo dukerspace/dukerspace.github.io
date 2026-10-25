@@ -2,7 +2,7 @@ import { createFileRoute, notFound, redirect } from '@tanstack/react-router'
 
 import { localeFromParam, localizedPath } from '../../../i18n'
 
-const PROJECT_SLUGS = ['muacle', 'zlalabs', 'suthep', 'fourcuz'] as const
+const PROJECT_SLUGS = ['rimping', 'muacle', 'zlalabs', 'suthep', 'fourcuz'] as const
 
 export const Route = createFileRoute('/{-$locale}/project/$slug')({
   beforeLoad: ({ params }) => {

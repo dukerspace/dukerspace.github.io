@@ -73,6 +73,11 @@
   @apply h-full w-full object-cover;
 }
 
+.project-media img.is-pixel {
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+
 .project-body {
   @apply p-5;
 }

@@ -8,6 +8,7 @@ import path from 'node:path'
 const staticPaths = [
   '/',
   '/projects',
+  '/projects/rimping',
   '/projects/suthep',
   '/projects/muacle',
   '/projects/fourcuz',
@@ -16,6 +17,7 @@ const staticPaths = [
   '/games',
   '/blog',
   '/project',
+  '/project/rimping',
   '/project/suthep',
   '/project/muacle',
   '/project/fourcuz',

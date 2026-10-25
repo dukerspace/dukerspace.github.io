@@ -5,6 +5,7 @@ import { Link } from '@tanstack/react-router'
 import React from 'react'
 
 import fourcuz from '../assets/images/fourcuz.png'
+import rimping from '../assets/images/rimping.png'
 import suthep from '../assets/images/suthep.png'
 import DefaultLayout from '../components/Layout/DefaultLayout'
 import LiveSitePreview from '../components/LiveSitePreview'
@@ -37,6 +38,46 @@ const HomePage: React.FC = () => {
         <section className="section">
           <h2 className="section-title">{t('home.projectsTitle')}</h2>
           <div className="projects-grid">
+            <div className="project-card">
+              <div className="project-media">
+                <img
+                  className="is-pixel"
+                  src={rimping}
+                  alt={t('rimping.imgAlt')}
+                />
+              </div>
+              <div className="project-body">
+                <div className="project-header">
+                  <h3 className="project-title">Rimping</h3>
+                  <span className="project-badge">{t('home.badgePersonal')}</span>
+                </div>
+                <p className="project-description">{t('home.rimpingDesc')}</p>
+                <div className="project-tags">
+                  <span>TypeScript</span>
+                  <span>Bun</span>
+                  <span>CLI</span>
+                </div>
+                <div className="project-links">
+                  <a
+                    href="https://github.com/dukerspace/rimping"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="project-link"
+                  >
+                    <FontAwesomeIcon icon={faGithub} />
+                    {t('home.linkGithub')}
+                  </a>
+                  <Link
+                    to={localizedPath('/projects/rimping', locale)}
+                    className="project-link"
+                  >
+                    <FontAwesomeIcon icon={faExternalLinkAlt} />
+                    {t('home.linkDetails')}
+                  </Link>
+                </div>
+              </div>
+            </div>
+
             <div className="project-card">
               <div className="project-media">
                 <img src={suthep} alt={t('suthep.imgAlt')} />
