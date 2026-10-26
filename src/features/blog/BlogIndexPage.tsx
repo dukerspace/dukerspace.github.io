@@ -1,11 +1,18 @@
 import { Link } from '@tanstack/react-router'
 import React from 'react'
 
-import { postsFor } from '../blog/posts'
-import DefaultLayout from '../components/Layout/DefaultLayout'
-import { localizedPath, type Locale } from '../i18n'
-import { useLocale, useT } from '../i18n/LocaleContext'
-import '../styles/index.css'
+import { postsFor } from './posts'
+import rimpingThumbnail from '../../assets/images/rimping.png'
+import suthepThumbnail from '../../assets/images/suthep.png'
+import DefaultLayout from '../../components/Layout/DefaultLayout'
+import { localizedPath, type Locale } from '../../i18n'
+import { useLocale, useT } from '../../i18n/LocaleContext'
+import '../../styles/index.css'
+
+const thumbnails: Record<string, string> = {
+  'rimping-agent-workflow': rimpingThumbnail,
+  'suthep-deployment-tool': suthepThumbnail,
+}
 
 function formatDate(iso: string, locale: Locale): string {
   const [year, month, day] = iso.split('-').map(Number)
@@ -32,6 +39,11 @@ const BlogIndexPage: React.FC = () => {
             <div className="projects-grid">
               {posts.map((post) => (
                 <article key={post.slug} className="project-card">
+                  {thumbnails[post.slug] && (
+                    <div className="project-media">
+                      <img src={thumbnails[post.slug]} alt="" aria-hidden="true" />
+                    </div>
+                  )}
                   <div className="project-body">
                     <p className="text-xs font-medium text-[#b8c5d1] mb-2">
                       <time dateTime={post.date}>{formatDate(post.date, locale)}</time>

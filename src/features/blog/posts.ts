@@ -1,4 +1,4 @@
-import type { Locale } from '../i18n'
+import type { Locale } from '../../i18n'
 
 export type BlogPost = {
   slug: string
@@ -9,7 +9,7 @@ export type BlogPost = {
   body: string
 }
 
-const rawPosts = import.meta.glob('../../content/blog/*/*.md', {
+const rawPosts = import.meta.glob('../../../content/blog/*/*.md', {
   query: '?raw',
   import: 'default',
   eager: true,

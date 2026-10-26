@@ -1,7 +1,7 @@
 import { createFileRoute, notFound } from '@tanstack/react-router'
 
-import { postBySlug } from '../../../blog/posts'
-import BlogPostPage from '../../../views/BlogPostPage'
+import { postBySlug } from '../../../features/blog/posts'
+import BlogPostPage from '../../../features/blog/BlogPostPage'
 import { localeFromParam } from '../../../i18n'
 import { localizedHead } from '../../../i18n/LocalizedHead'
 import { pageHead } from '../../../components/seo'

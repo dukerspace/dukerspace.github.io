@@ -1,6 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router'
 
-import BlogIndexPage from '../../../views/BlogIndexPage'
+import BlogIndexPage from '../../../features/blog/BlogIndexPage'
 import { localeFromParam } from '../../../i18n'
 import { localizedHead } from '../../../i18n/LocalizedHead'
 

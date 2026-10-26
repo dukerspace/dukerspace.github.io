@@ -1,6 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router'
 
-import ZlalabsPage from '../../../views/ZlalabsPage'
+import ZlalabsPage from '../../../features/projects/ZlalabsPage'
 import { localeFromParam } from '../../../i18n'
 import { localizedHead } from '../../../i18n/LocalizedHead'
 import { translate } from '../../../i18n/LocaleContext'

@@ -1,6 +1,6 @@
 import { Outlet, createFileRoute, notFound } from '@tanstack/react-router'
 
-import NotFoundView from '../../views/NotFoundPage'
+import NotFoundView from '../../features/not-found/NotFoundPage'
 
 export const Route = createFileRoute('/{-$locale}')({
   beforeLoad: ({ params }) => {

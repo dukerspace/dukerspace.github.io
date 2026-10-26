@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react'
 
-import DefaultLayout from '../components/Layout/DefaultLayout'
-import { useT } from '../i18n/LocaleContext'
-import { site } from '../seo/site'
-import '../styles/content-page.css'
+import DefaultLayout from '../../components/Layout/DefaultLayout'
+import { useT } from '../../i18n/LocaleContext'
+import { site } from '../../seo/site'
+import '../../styles/content-page.css'
 
 const NotFoundView: React.FC = () => {
   const t = useT()

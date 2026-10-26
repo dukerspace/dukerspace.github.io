@@ -3,11 +3,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 
-import DefaultLayout from '../components/Layout/DefaultLayout'
-import profile from '../assets/images/profile.jpg'
-import { calculateDuration, experienceRanges } from '../i18n/duration'
-import { useT } from '../i18n/LocaleContext'
-import '../styles/index.css'
+import DefaultLayout from '../../components/Layout/DefaultLayout'
+import profile from '../../assets/images/profile.jpg'
+import { calculateDuration, experienceRanges } from '../../i18n/duration'
+import { useT } from '../../i18n/LocaleContext'
+import '../../styles/index.css'
 
 const AboutMePage: React.FC = () => {
   const t = useT()

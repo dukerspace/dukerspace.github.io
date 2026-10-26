@@ -1,6 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router'
 
-import MuaclePage from '../../../views/MuaclePage'
+import MuaclePage from '../../../features/projects/MuaclePage'
 import { localeFromParam } from '../../../i18n'
 import { localizedHead } from '../../../i18n/LocalizedHead'
 import { translate } from '../../../i18n/LocaleContext'

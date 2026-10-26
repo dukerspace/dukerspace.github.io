@@ -1,6 +1,6 @@
 // Run with: node --experimental-strip-types scripts/games-check.mjs
 import assert from 'node:assert/strict'
-import { randomInt } from '../src/components/Games/logic.ts'
+import { randomInt } from '../src/features/games/logic.ts'
 
 for (const max of [2, 6, 10, 12]) {
 	for (let i = 0; i < 100; i++) {

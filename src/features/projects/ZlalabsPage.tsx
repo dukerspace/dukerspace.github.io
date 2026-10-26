@@ -1,9 +1,9 @@
 import React from 'react'
 
-import DefaultLayout from '../components/Layout/DefaultLayout'
-import LiveSitePreview from '../components/LiveSitePreview'
-import { useT } from '../i18n/LocaleContext'
-import '../styles/content-page.css'
+import DefaultLayout from '../../components/Layout/DefaultLayout'
+import LiveSitePreview from '../../components/LiveSitePreview'
+import { useT } from '../../i18n/LocaleContext'
+import '../../styles/content-page.css'
 
 const ZlalabsPage: React.FC = () => {
   const t = useT()
@@ -20,7 +20,7 @@ const ZlalabsPage: React.FC = () => {
 
             <div className="my-8 text-center">
               <LiveSitePreview
-                src="https://www.zlalabs.com/"
+                src="https://zlalabs.com/"
                 title={t('zlalabs.imgAlt')}
                 interactive
                 className="mx-auto max-w-4xl rounded-lg border border-white/15 shadow-[0_8px_32px_rgba(0,0,0,0.3)]"
@@ -28,12 +28,12 @@ const ZlalabsPage: React.FC = () => {
               <p className="mt-2 text-sm text-[#b8c5d1]">
                 {t('zlalabs.clickImage')}{' '}
                 <a
-                  href="https://www.zlalabs.com/"
+                  href="https://zlalabs.com/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-[#ec5990] hover:text-[#f06ba3] hover:underline"
                 >
-                  https://www.zlalabs.com/
+                  https://zlalabs.com/
                 </a>
               </p>
             </div>
@@ -45,12 +45,12 @@ const ZlalabsPage: React.FC = () => {
               <p>
                 <strong>{t('zlalabs.liveLabel')}</strong>{' '}
                 <a
-                  href="https://www.zlalabs.com/"
+                  href="https://zlalabs.com/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-[#ec5990] hover:text-[#f06ba3] hover:underline"
                 >
-                  https://www.zlalabs.com/
+                  https://zlalabs.com/
                 </a>
               </p>
               <p>

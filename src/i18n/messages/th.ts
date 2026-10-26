@@ -56,10 +56,11 @@ export const th: Record<MessageKey, string> = {
 	'home.seoDescription':
 		'พอร์ตโฟลิโอวิศวกรซอฟต์แวร์ — มณฑล สาคลอ โปรเจกต์ส่วนตัวรวมถึง Rimping, Muacle, Zla Labs, Suthep และ Fourcuz',
 	'home.heroTitleBefore': 'สวัสดี! ฉันชื่อ ',
-	'home.heroName': 'Montol',
+	'home.heroName': 'มณฑล',
 	'home.heroSubtitleBefore': 'วิศวกรซอฟต์แวร์จาก ',
 	'home.heroLocation': 'เชียงใหม่ ประเทศไทย',
 	'home.projectsTitle': 'โปรเจกต์ส่วนตัว',
+	'home.moreProjects': 'ดูโปรเจกต์ทั้งหมด',
 	'home.badgePersonal': 'โปรเจกต์ส่วนตัว',
 	'home.badgeZlalabs': 'Zla Labs',
 	'home.muacleDesc': 'แพลตฟอร์มดูดวงออนไลน์และราศีที่ขับเคลื่อนด้วย AI',
@@ -265,6 +266,7 @@ export const th: Record<MessageKey, string> = {
 	'blog.seoDescription':
 		'บันทึกจาก dukerspace — งานที่กำลังทำ และบทเรียนสั้น ๆ จากโปรเจกต์ส่วนตัว',
 	'blog.empty': 'ยังไม่มีบทความ',
+	'blog.toc': 'สารบัญ',
 
 	'notFound.seoTitle': '404: ไม่พบหน้า',
 	'notFound.title': '404: ไม่พบหน้า',

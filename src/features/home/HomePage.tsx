@@ -4,14 +4,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Link } from '@tanstack/react-router'
 import React from 'react'
 
-import fourcuz from '../assets/images/fourcuz.png'
-import rimping from '../assets/images/rimping.png'
-import suthep from '../assets/images/suthep.png'
-import DefaultLayout from '../components/Layout/DefaultLayout'
-import LiveSitePreview from '../components/LiveSitePreview'
-import { localizedPath } from '../i18n'
-import { useLocale, useT } from '../i18n/LocaleContext'
-import '../styles/index.css'
+import fourcuz from '../../assets/images/fourcuz.png'
+import rimping from '../../assets/images/rimping.png'
+import suthep from '../../assets/images/suthep.png'
+import DefaultLayout from '../../components/Layout/DefaultLayout'
+import LiveSitePreview from '../../components/LiveSitePreview'
+import { localizedPath } from '../../i18n'
+import { useLocale, useT } from '../../i18n/LocaleContext'
+import '../../styles/index.css'
 
 const HomePage: React.FC = () => {
   const t = useT()
@@ -37,7 +37,7 @@ const HomePage: React.FC = () => {
 
         <section className="section">
           <h2 className="section-title">{t('home.projectsTitle')}</h2>
-          <div className="projects-grid">
+          <div className="projects-grid home-projects-grid">
             <div className="project-card">
               <div className="project-media">
                 <img
@@ -190,7 +190,7 @@ const HomePage: React.FC = () => {
 
             <div className="project-card">
               <LiveSitePreview
-                src="https://www.zlalabs.com/"
+                src="https://zlalabs.com/"
                 title={t('zlalabs.imgAlt')}
               />
               <div className="project-body">
@@ -205,7 +205,7 @@ const HomePage: React.FC = () => {
                 </div>
                 <div className="project-links">
                   <a
-                    href="https://www.zlalabs.com/"
+                    href="https://zlalabs.com/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="project-link"
@@ -233,6 +233,12 @@ const HomePage: React.FC = () => {
               </div>
             </div>
           </div>
+          <Link
+            to={localizedPath('/projects', locale)}
+            className="project-link mt-4"
+          >
+            {t('home.moreProjects')}
+          </Link>
         </section>
 
         <section className="section">

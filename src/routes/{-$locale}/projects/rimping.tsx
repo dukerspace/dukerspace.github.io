@@ -1,6 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router'
 
-import RimpingPage from '../../../views/RimpingPage'
+import RimpingPage from '../../../features/projects/RimpingPage'
 import { localeFromParam } from '../../../i18n'
 import { localizedHead } from '../../../i18n/LocalizedHead'
 import { translate } from '../../../i18n/LocaleContext'

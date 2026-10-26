@@ -41,7 +41,7 @@ English lives under the /en prefix at https://dukerspace.com/en
 ### Zla Labs
 - Thai: https://dukerspace.com/projects/zlalabs
 - English: https://dukerspace.com/en/projects/zlalabs
-- Live: https://www.zlalabs.com/
+- Live: https://zlalabs.com/
 - GitHub org: https://github.com/zlalabs
 - Software lab based in Thailand building open-source tools and product experiments.
 

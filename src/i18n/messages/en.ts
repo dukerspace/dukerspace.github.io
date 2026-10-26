@@ -58,6 +58,7 @@ export const en = {
 	'home.heroSubtitleBefore': 'Software Engineer from ',
 	'home.heroLocation': 'Chiang Mai, Thailand',
 	'home.projectsTitle': 'Personal Projects',
+	'home.moreProjects': 'View all projects',
 	'home.badgePersonal': 'Personal project',
 	'home.badgeZlalabs': 'Zla Labs',
 	'home.muacleDesc': 'AI-powered online fortune-telling and zodiac platform',
@@ -272,6 +273,7 @@ export const en = {
 	'blog.seoDescription':
 		'Notes from dukerspace — work in progress and short lessons from personal projects.',
 	'blog.empty': 'No posts yet.',
+	'blog.toc': 'On this page',
 
 	'notFound.seoTitle': '404: Not found',
 	'notFound.title': '404: Page Not Found',

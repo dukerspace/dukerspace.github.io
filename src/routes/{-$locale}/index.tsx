@@ -1,6 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router'
 
-import HomePage from '../../views/HomePage'
+import HomePage from '../../features/home/HomePage'
 import { localeFromParam } from '../../i18n'
 import { localizedHead } from '../../i18n/LocalizedHead'
 import { translate } from '../../i18n/LocaleContext'

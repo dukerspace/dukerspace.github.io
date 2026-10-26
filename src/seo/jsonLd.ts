@@ -26,7 +26,7 @@ export const PROJECTS = {
   zlalabs: {
     name: 'Zla Labs',
     path: '/projects/zlalabs',
-    applicationUrl: 'https://www.zlalabs.com/',
+    applicationUrl: 'https://zlalabs.com/',
     schemaType: 'WebApplication' as const,
   },
   suthep: {
