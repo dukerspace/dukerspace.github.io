@@ -7,7 +7,7 @@ on:
 
 jobs:
     deploy:
-        runs-on: self-host
+        runs-on: ubuntu-latest
         timeout-minutes: 20
         environment: production
         steps:
