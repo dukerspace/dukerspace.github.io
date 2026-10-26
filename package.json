@@ -30,7 +30,7 @@
     "build": "vite build",
     "start": "vite dev",
     "serve": "vite preview --outDir dist/client",
-    "deploy": "bun run build && bun scripts/prepare-gh-pages.mjs && gh-pages -d dist/client -b gh-pages -t --nojekyll",
+    "deploy": "bun run build && bun scripts/prepare-gh-pages.mjs && wrangler deploy --env production",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "clean": "rm -rf dist .output .tanstack",
     "test": "echo \"No tests configured\" && exit 0"
@@ -42,9 +42,9 @@
     "@types/react-dom": "^19.3.0",
     "@types/three": "^0.186.0",
     "@vitejs/plugin-react": "^6.1.2",
-    "gh-pages": "^6.3.0",
     "prettier": "^3.9.9",
     "typescript": "^7.0.2",
-    "vite": "^8.3.5"
+    "vite": "^8.3.5",
+    "wrangler": "^4.0.0"
   }
 }

@@ -1,10 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react'
-import DefaultLayout from '../components/Layout/DefaultLayout'
-import Crocodile2D from '../components/Games/Crocodile2D'
-import AnimalRace3D from '../components/Games/AnimalRace3D'
-import { randomInt } from '../components/Games/logic'
-import { useT } from '../i18n/LocaleContext'
-import type { MessageKey } from '../i18n/messages/en'
+import DefaultLayout from '../../components/Layout/DefaultLayout'
+import Crocodile2D from './Crocodile2D'
+import AnimalRace3D from './AnimalRace3D'
+import { randomInt } from './logic'
+import { useT } from '../../i18n/LocaleContext'
+import type { MessageKey } from '../../i18n/messages/en'
 import './games.css'
 
 const gameIds = ['crocodile', 'race', 'dice'] as const

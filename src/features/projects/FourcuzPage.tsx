@@ -1,9 +1,9 @@
 import React from 'react'
 
-import fourcuz from '../assets/images/fourcuz.png'
-import DefaultLayout from '../components/Layout/DefaultLayout'
-import { useT } from '../i18n/LocaleContext'
-import '../styles/content-page.css'
+import fourcuz from '../../assets/images/fourcuz.png'
+import DefaultLayout from '../../components/Layout/DefaultLayout'
+import { useT } from '../../i18n/LocaleContext'
+import '../../styles/content-page.css'
 
 const FourcuzPage: React.FC = () => {
   const t = useT()

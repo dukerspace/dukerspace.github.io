@@ -15,6 +15,62 @@
   animation: fadeIn 0.5s ease-in;
 }
 
+.blog-post-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 900px) 220px;
+  gap: 2rem;
+  align-items: start;
+}
+
+.blog-toc {
+  position: sticky;
+  top: 6rem;
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.blog-toc h2 {
+  @apply text-white text-lg font-semibold mb-3;
+}
+
+.blog-toc ul {
+  @apply list-none m-0 p-0 border-l border-white/15;
+}
+
+.blog-toc li {
+  @apply my-0;
+}
+
+.blog-toc a {
+  @apply block py-2 pl-4 text-sm leading-snug text-[#b8c5d1] no-underline border-l-2 border-transparent -ml-px;
+}
+
+.blog-toc a:hover,
+.blog-toc a:focus-visible {
+  @apply text-[#ec5990] border-[#ec5990];
+}
+
+.blog-post-grid .notebook-article {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+@media (max-width: 1023px) {
+  .blog-post-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .blog-toc,
+  .blog-post-grid .notebook-article {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .blog-toc {
+    position: static;
+  }
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;

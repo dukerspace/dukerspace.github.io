@@ -1,6 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router'
 
-import GamesPage from '../../views/GamesPage'
+import GamesPage from '../../features/games/GamesPage'
 import { localeFromParam } from '../../i18n'
 import { localizedHead } from '../../i18n/LocalizedHead'
 

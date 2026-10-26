@@ -52,17 +52,20 @@ export const en = {
 
 	'home.seoTitle': 'DUKERSPACE',
 	'home.seoDescription':
-		'Software engineer portfolio — Montol Saklor. Personal projects including Muacle, Zla Labs, Suthep, and Fourcuz.',
+		'Software engineer portfolio — Montol Saklor. Personal projects including Rimping, Muacle, Zla Labs, Suthep, and Fourcuz.',
 	'home.heroTitleBefore': "Hello there! I'm ",
 	'home.heroName': 'Montol',
 	'home.heroSubtitleBefore': 'Software Engineer from ',
 	'home.heroLocation': 'Chiang Mai, Thailand',
 	'home.projectsTitle': 'Personal Projects',
+	'home.moreProjects': 'View all projects',
 	'home.badgePersonal': 'Personal project',
 	'home.badgeZlalabs': 'Zla Labs',
 	'home.muacleDesc': 'AI-powered online fortune-telling and zodiac platform',
 	'home.zlalabsDesc':
 		'Software lab based in Thailand — open-source tools and product experiments',
+	'home.rimpingDesc':
+		'Cuts tokens in prompts, shell output, and file reads before they reach an agent',
 	'home.suthepDesc':
 		'Deployment tool for Docker with automatic Nginx reverse proxy and HTTPS',
 	'home.fourcuzDesc':
@@ -109,8 +112,41 @@ export const en = {
 
 	'projects.seoTitle': 'Projects',
 	'projects.seoDescription':
-		'Personal projects by Montol Saklor — Muacle, Zla Labs, Suthep, and Fourcuz.',
+		'Personal projects by Montol Saklor — Rimping, Muacle, Zla Labs, Suthep, and Fourcuz.',
 	'projects.title': 'Personal Projects',
+
+	'rimping.seoTitle': 'Rimping',
+	'rimping.seoDescription':
+		'Rimping — cuts tokens in prompts, shell output, and file reads before they reach an agent.',
+	'rimping.tagline':
+		'Cuts tokens in prompts, shell output, and file reads before they reach an agent',
+	'rimping.imgAlt': 'Rimping pixel art of the Ping River',
+	'rimping.about': 'About',
+	'rimping.aboutBody':
+		'Rimping cuts tokens in three layers — the prompt, shell output, and file reads — before they reach an LLM agent. Dstack sits beside it as a file pack: AGENTS.md, budgets, skills, and adapters for lean agent workflows.',
+	'rimping.features': 'Key Features',
+	'rimping.feature.prompt': 'Prompt compression',
+	'rimping.feature.promptDesc':
+		'Strips filler, injects the diff, and compresses the prompt before it is sent',
+	'rimping.feature.shell': 'Shell output',
+	'rimping.feature.shellDesc':
+		'Compresses command output such as git status, test logs, and search results',
+	'rimping.feature.read': 'File reads',
+	'rimping.feature.readDesc':
+		'Caps how many lines are read and strips comments afterward',
+	'rimping.feature.dstack': 'Dstack',
+	'rimping.feature.dstackDesc':
+		'File pack of AGENTS.md, budgets, skills, and adapters for lean workflows',
+	'rimping.feature.hooks': 'Agent hooks',
+	'rimping.feature.hooksDesc':
+		'Registers hooks for Cursor, Claude Code, and Codex',
+	'rimping.technology': 'Technology',
+	'rimping.technologyBody':
+		'TypeScript and Bun, with hooks for Cursor, Claude Code, and Codex.',
+	'rimping.license': 'License',
+	'rimping.licenseBody': 'MIT License',
+	'rimping.githubLabel': 'GitHub:',
+	'rimping.installLabel': 'Getting started:',
 
 	'muacle.seoTitle': 'Muacle',
 	'muacle.seoDescription':
@@ -237,6 +273,7 @@ export const en = {
 	'blog.seoDescription':
 		'Notes from dukerspace — work in progress and short lessons from personal projects.',
 	'blog.empty': 'No posts yet.',
+	'blog.toc': 'On this page',
 
 	'notFound.seoTitle': '404: Not found',
 	'notFound.title': '404: Page Not Found',

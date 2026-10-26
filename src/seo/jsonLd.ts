@@ -11,6 +11,12 @@ const SAME_AS = [
 const EMAIL = 'montolsaklor@gmail.com'
 
 export const PROJECTS = {
+  rimping: {
+    name: 'Rimping',
+    path: '/projects/rimping',
+    applicationUrl: 'https://github.com/dukerspace/rimping',
+    schemaType: 'SoftwareApplication' as const,
+  },
   muacle: {
     name: 'Muacle',
     path: '/projects/muacle',
@@ -20,7 +26,7 @@ export const PROJECTS = {
   zlalabs: {
     name: 'Zla Labs',
     path: '/projects/zlalabs',
-    applicationUrl: 'https://www.zlalabs.com/',
+    applicationUrl: 'https://zlalabs.com/',
     schemaType: 'WebApplication' as const,
   },
   suthep: {

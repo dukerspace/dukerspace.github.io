@@ -1,6 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router'
 
-import AboutMePage from '../../views/AboutMePage'
+import AboutMePage from '../../features/about/AboutMePage'
 import { localeFromParam } from '../../i18n'
 import { localizedHead } from '../../i18n/LocalizedHead'
 import { personJsonLd } from '../../seo/jsonLd'

@@ -8,8 +8,9 @@ interface HeaderProps {
   siteTitle?: string
 }
 
-const activeLang = 'text-[#ec5990] no-underline transition-colors'
-const idleLang = 'text-[#b8c5d1] no-underline hover:text-[#ec5990] transition-colors'
+const activeLang = 'text-[#ec5990] no-underline hover:no-underline transition-colors'
+const idleLang =
+  'text-[#b8c5d1] no-underline hover:text-[#ec5990] hover:no-underline transition-colors'
 
 const Header: React.FC<HeaderProps> = ({ siteTitle = '' }) => {
   const t = useT()
@@ -20,26 +21,26 @@ const Header: React.FC<HeaderProps> = ({ siteTitle = '' }) => {
 
   return (
     <header>
-      <div className="container mx-auto px-4 flex flex-wrap gap-3 items-center justify-between">
+      <div className="container mx-auto max-w-[1200px] px-4 flex flex-wrap gap-3 items-center justify-between">
         <h1>
           <Link to={localizedPath('/', locale)}>{siteTitle}</Link>
         </h1>
-        <nav className="flex items-center gap-4">
+        <nav className="flex flex-wrap items-center gap-4">
           <Link
             to={localizedPath('/projects', locale)}
-            className="text-[#b8c5d1] no-underline hover:text-[#ec5990] transition-colors"
+            className="text-[#b8c5d1] no-underline hover:text-[#ec5990] hover:no-underline transition-colors"
           >
             {t('nav.projects')}
           </Link>
           <Link
             to={localizedPath('/blog', locale)}
-            className="text-[#b8c5d1] no-underline hover:text-[#ec5990] transition-colors"
+            className="text-[#b8c5d1] no-underline hover:text-[#ec5990] hover:no-underline transition-colors"
           >
             {t('nav.blog')}
           </Link>
           <Link
             to={localizedPath('/games', locale)}
-            className="text-[#b8c5d1] no-underline hover:text-[#ec5990] transition-colors"
+            className="text-[#b8c5d1] no-underline hover:text-[#ec5990] hover:no-underline transition-colors"
           >
             {t('nav.games')}
           </Link>

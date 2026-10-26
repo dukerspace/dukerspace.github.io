@@ -1,6 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router'
 
-import NotFoundView from '../views/NotFoundPage'
+import NotFoundView from '../features/not-found/NotFoundPage'
 import { localeFromPath } from '../i18n'
 import { localizedHead } from '../i18n/LocalizedHead'
 

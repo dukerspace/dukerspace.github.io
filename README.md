@@ -9,7 +9,7 @@ Live site: [https://dukerspace.com](https://dukerspace.com)
 - [TanStack Start](https://tanstack.com/start) SPA mode + React 19 + TypeScript
 - [TanStack Router](https://tanstack.com/router)
 - [Tailwind CSS](https://tailwindcss.com/) 4
-- Deployed to GitHub Pages (`gh-pages` branch)
+- Deployed to Cloudflare Workers through GitHub Actions (`production` environment)
 
 The production build is static. There is no request-time server. Known routes are prerendered to HTML, and unknown URLs fall back to the SPA shell.
 
@@ -34,7 +34,7 @@ Dev server runs at [http://localhost:3000](http://localhost:3000).
 | `bun run build` | Production build → `dist/client/` |
 | `bun run serve` | Serve the production build locally |
 | `bun run clean` | Remove `dist/` |
-| `bun run deploy` | Build, copy CNAME and `404.html`, push to `gh-pages` |
+| `bun run deploy` | Build and deploy the production Cloudflare Worker |
 | `bun run format` | Format with Prettier |
 
 ## Locales
@@ -64,11 +64,22 @@ The slug is the filename. Add the same slug in both folders when a post has both
 
 ## Deploy
 
+The [deployment workflow](./.github/workflows/deploy.yml) runs on pushes to `main` or manually through GitHub Actions. The job uses the GitHub environment named `production` and deploys with `wrangler deploy --env production`.
+
+In GitHub **Settings > Environments > production**, add these environment secrets:
+
+- `CLOUDFLARE_API_TOKEN`: a scoped token with the **Edit Cloudflare Workers** permissions.
+- `CLOUDFLARE_ACCOUNT_ID`: the Cloudflare account ID.
+
+The Worker is named `dukerspace-production` in [wrangler.jsonc](./wrangler.jsonc). Change it if deploying to an existing Worker with a different name. Configure `dukerspace.com` as its custom domain in Cloudflare; the GitHub Pages `CNAME` file does not configure Worker domains.
+
+For a local deployment, authenticate with `bunx wrangler login`, then run:
+
 ```bash
 bun run deploy
 ```
 
-Builds the site, copies [`src/CNAME`](./src/CNAME) and the SPA shell as `404.html` into `dist/client/`, writes `.nojekyll` so GitHub Pages serves assets whose names start with `_`, and publishes that folder to the `gh-pages` branch.
+The existing preparation script copies the SPA shell as `404.html` into `dist/client/`. Cloudflare serves prerendered pages with extensionless URLs and uses that shell for unknown URLs, retaining a 404 response status.
 
 ## License
 

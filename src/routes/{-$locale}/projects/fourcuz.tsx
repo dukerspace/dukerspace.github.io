@@ -1,6 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router'
 
-import FourcuzPage from '../../../views/FourcuzPage'
+import FourcuzPage from '../../../features/projects/FourcuzPage'
 import { localeFromParam } from '../../../i18n'
 import { localizedHead } from '../../../i18n/LocalizedHead'
 import { translate } from '../../../i18n/LocaleContext'

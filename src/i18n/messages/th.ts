@@ -54,17 +54,20 @@ export const th: Record<MessageKey, string> = {
 
 	'home.seoTitle': 'DUKERSPACE',
 	'home.seoDescription':
-		'พอร์ตโฟลิโอวิศวกรซอฟต์แวร์ — มณฑล สาคลอ โปรเจกต์ส่วนตัวรวมถึง Muacle, Zla Labs, Suthep และ Fourcuz',
+		'พอร์ตโฟลิโอวิศวกรซอฟต์แวร์ — มณฑล สาคลอ โปรเจกต์ส่วนตัวรวมถึง Rimping, Muacle, Zla Labs, Suthep และ Fourcuz',
 	'home.heroTitleBefore': 'สวัสดี! ฉันชื่อ ',
-	'home.heroName': 'Montol',
+	'home.heroName': 'มณฑล',
 	'home.heroSubtitleBefore': 'วิศวกรซอฟต์แวร์จาก ',
 	'home.heroLocation': 'เชียงใหม่ ประเทศไทย',
 	'home.projectsTitle': 'โปรเจกต์ส่วนตัว',
+	'home.moreProjects': 'ดูโปรเจกต์ทั้งหมด',
 	'home.badgePersonal': 'โปรเจกต์ส่วนตัว',
 	'home.badgeZlalabs': 'Zla Labs',
 	'home.muacleDesc': 'แพลตฟอร์มดูดวงออนไลน์และราศีที่ขับเคลื่อนด้วย AI',
 	'home.zlalabsDesc':
 		'แล็บซอฟต์แวร์ในประเทศไทย — เครื่องมือโอเพนซอร์สและทดลองผลิตภัณฑ์',
+	'home.rimpingDesc':
+		'ตัดโทเคนในพรอมต์ ผลลัพธ์เชลล์ และการอ่านไฟล์ ก่อนส่งถึงเอเจนต์',
 	'home.suthepDesc':
 		'เครื่องมือดีพลอย Docker พร้อม Nginx reverse proxy และ HTTPS อัตโนมัติ',
 	'home.fourcuzDesc':
@@ -111,8 +114,39 @@ export const th: Record<MessageKey, string> = {
 
 	'projects.seoTitle': 'โปรเจกต์',
 	'projects.seoDescription':
-		'โปรเจกต์ส่วนตัวโดย มณฑล สาคลอ — Muacle, Zla Labs, Suthep และ Fourcuz',
+		'โปรเจกต์ส่วนตัวโดย มณฑล สาคลอ — Rimping, Muacle, Zla Labs, Suthep และ Fourcuz',
 	'projects.title': 'โปรเจกต์ส่วนตัว',
+
+	'rimping.seoTitle': 'Rimping',
+	'rimping.seoDescription':
+		'Rimping — ตัดโทเคนในพรอมต์ ผลลัพธ์เชลล์ และการอ่านไฟล์ ก่อนส่งถึงเอเจนต์',
+	'rimping.tagline':
+		'ตัดโทเคนในพรอมต์ ผลลัพธ์เชลล์ และการอ่านไฟล์ ก่อนส่งถึงเอเจนต์',
+	'rimping.imgAlt': 'ภาพพิกเซลแม่น้ำปิงของ Rimping',
+	'rimping.about': 'เกี่ยวกับ',
+	'rimping.aboutBody':
+		'Rimping ตัดโทเคนสามชั้น — พรอมต์ ผลลัพธ์จากเชลล์ และการอ่านไฟล์ — ก่อนส่งถึงเอเจนต์ Dstack เป็นชุดไฟล์คู่กัน: AGENTS.md, งบโทเคน, สกิล และอะแดปเตอร์ สำหรับเวิร์กโฟลว์เอเจนต์ที่กระชับ',
+	'rimping.features': 'ฟีเจอร์หลัก',
+	'rimping.feature.prompt': 'บีบพรอมต์',
+	'rimping.feature.promptDesc': 'ตัดคำฟุ่มเฟือย แทรก diff และบีบพรอมต์ก่อนส่ง',
+	'rimping.feature.shell': 'ผลลัพธ์เชลล์',
+	'rimping.feature.shellDesc':
+		'บีบเอาต์พุตคำสั่ง เช่น git status, ล็อกเทสต์ และผลการค้นหา',
+	'rimping.feature.read': 'การอ่านไฟล์',
+	'rimping.feature.readDesc':
+		'จำกัดจำนวนบรรทัดที่อ่าน และตัดคอมเมนต์หลังจากอ่าน',
+	'rimping.feature.dstack': 'Dstack',
+	'rimping.feature.dstackDesc':
+		'ชุดไฟล์ AGENTS.md, งบโทเคน, สกิล และอะแดปเตอร์ สำหรับเวิร์กโฟลว์ที่กระชับ',
+	'rimping.feature.hooks': 'ฮุกเอเจนต์',
+	'rimping.feature.hooksDesc': 'ลงทะเบียนฮุกให้ Cursor, Claude Code และ Codex',
+	'rimping.technology': 'เทคโนโลยี',
+	'rimping.technologyBody':
+		'เขียนด้วย TypeScript และ Bun พร้อมฮุกสำหรับ Cursor, Claude Code และ Codex',
+	'rimping.license': 'สัญญาอนุญาต',
+	'rimping.licenseBody': 'MIT License',
+	'rimping.githubLabel': 'GitHub:',
+	'rimping.installLabel': 'เริ่มต้น:',
 
 	'muacle.seoTitle': 'Muacle',
 	'muacle.seoDescription':
@@ -232,6 +266,7 @@ export const th: Record<MessageKey, string> = {
 	'blog.seoDescription':
 		'บันทึกจาก dukerspace — งานที่กำลังทำ และบทเรียนสั้น ๆ จากโปรเจกต์ส่วนตัว',
 	'blog.empty': 'ยังไม่มีบทความ',
+	'blog.toc': 'สารบัญ',
 
 	'notFound.seoTitle': '404: ไม่พบหน้า',
 	'notFound.title': '404: ไม่พบหน้า',

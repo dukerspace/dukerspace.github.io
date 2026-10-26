@@ -21,6 +21,7 @@ import { Route as Char123LocaleChar125ProjectSlugRouteImport } from './routes/{-
 import { Route as Char123LocaleChar125ProjectsIndexRouteImport } from './routes/{-$locale}/projects/index'
 import { Route as Char123LocaleChar125ProjectsFourcuzRouteImport } from './routes/{-$locale}/projects/fourcuz'
 import { Route as Char123LocaleChar125ProjectsMuacleRouteImport } from './routes/{-$locale}/projects/muacle'
+import { Route as Char123LocaleChar125ProjectsRimpingRouteImport } from './routes/{-$locale}/projects/rimping'
 import { Route as Char123LocaleChar125ProjectsSuthepRouteImport } from './routes/{-$locale}/projects/suthep'
 import { Route as Char123LocaleChar125ProjectsZlalabsRouteImport } from './routes/{-$locale}/projects/zlalabs'
 
@@ -94,6 +95,12 @@ const Char123LocaleChar125ProjectsMuacleRoute =
     path: '/projects/muacle',
     getParentRoute: () => Char123LocaleChar125RouteRoute,
   } as any)
+const Char123LocaleChar125ProjectsRimpingRoute =
+  Char123LocaleChar125ProjectsRimpingRouteImport.update({
+    id: '/projects/rimping',
+    path: '/projects/rimping',
+    getParentRoute: () => Char123LocaleChar125RouteRoute,
+  } as any)
 const Char123LocaleChar125ProjectsSuthepRoute =
   Char123LocaleChar125ProjectsSuthepRouteImport.update({
     id: '/projects/suthep',
@@ -117,6 +124,7 @@ export interface FileRoutesByFullPath {
   '/{-$locale}/project/$slug': typeof Char123LocaleChar125ProjectSlugRoute
   '/{-$locale}/projects/fourcuz': typeof Char123LocaleChar125ProjectsFourcuzRoute
   '/{-$locale}/projects/muacle': typeof Char123LocaleChar125ProjectsMuacleRoute
+  '/{-$locale}/projects/rimping': typeof Char123LocaleChar125ProjectsRimpingRoute
   '/{-$locale}/projects/suthep': typeof Char123LocaleChar125ProjectsSuthepRoute
   '/{-$locale}/projects/zlalabs': typeof Char123LocaleChar125ProjectsZlalabsRoute
   '/{-$locale}/blog/': typeof Char123LocaleChar125BlogIndexRoute
@@ -132,6 +140,7 @@ export interface FileRoutesByTo {
   '/{-$locale}/project/$slug': typeof Char123LocaleChar125ProjectSlugRoute
   '/{-$locale}/projects/fourcuz': typeof Char123LocaleChar125ProjectsFourcuzRoute
   '/{-$locale}/projects/muacle': typeof Char123LocaleChar125ProjectsMuacleRoute
+  '/{-$locale}/projects/rimping': typeof Char123LocaleChar125ProjectsRimpingRoute
   '/{-$locale}/projects/suthep': typeof Char123LocaleChar125ProjectsSuthepRoute
   '/{-$locale}/projects/zlalabs': typeof Char123LocaleChar125ProjectsZlalabsRoute
   '/{-$locale}/blog': typeof Char123LocaleChar125BlogIndexRoute
@@ -149,6 +158,7 @@ export interface FileRoutesById {
   '/{-$locale}/project/$slug': typeof Char123LocaleChar125ProjectSlugRoute
   '/{-$locale}/projects/fourcuz': typeof Char123LocaleChar125ProjectsFourcuzRoute
   '/{-$locale}/projects/muacle': typeof Char123LocaleChar125ProjectsMuacleRoute
+  '/{-$locale}/projects/rimping': typeof Char123LocaleChar125ProjectsRimpingRoute
   '/{-$locale}/projects/suthep': typeof Char123LocaleChar125ProjectsSuthepRoute
   '/{-$locale}/projects/zlalabs': typeof Char123LocaleChar125ProjectsZlalabsRoute
   '/{-$locale}/blog/': typeof Char123LocaleChar125BlogIndexRoute
@@ -167,6 +177,7 @@ export interface FileRouteTypes {
     | '/{-$locale}/project/$slug'
     | '/{-$locale}/projects/fourcuz'
     | '/{-$locale}/projects/muacle'
+    | '/{-$locale}/projects/rimping'
     | '/{-$locale}/projects/suthep'
     | '/{-$locale}/projects/zlalabs'
     | '/{-$locale}/blog/'
@@ -182,6 +193,7 @@ export interface FileRouteTypes {
     | '/{-$locale}/project/$slug'
     | '/{-$locale}/projects/fourcuz'
     | '/{-$locale}/projects/muacle'
+    | '/{-$locale}/projects/rimping'
     | '/{-$locale}/projects/suthep'
     | '/{-$locale}/projects/zlalabs'
     | '/{-$locale}/blog'
@@ -198,6 +210,7 @@ export interface FileRouteTypes {
     | '/{-$locale}/project/$slug'
     | '/{-$locale}/projects/fourcuz'
     | '/{-$locale}/projects/muacle'
+    | '/{-$locale}/projects/rimping'
     | '/{-$locale}/projects/suthep'
     | '/{-$locale}/projects/zlalabs'
     | '/{-$locale}/blog/'
@@ -296,6 +309,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof Char123LocaleChar125ProjectsMuacleRouteImport
       parentRoute: typeof Char123LocaleChar125RouteRoute
     }
+    '/{-$locale}/projects/rimping': {
+      id: '/{-$locale}/projects/rimping'
+      path: '/projects/rimping'
+      fullPath: '/{-$locale}/projects/rimping'
+      preLoaderRoute: typeof Char123LocaleChar125ProjectsRimpingRouteImport
+      parentRoute: typeof Char123LocaleChar125RouteRoute
+    }
     '/{-$locale}/projects/suthep': {
       id: '/{-$locale}/projects/suthep'
       path: '/projects/suthep'
@@ -321,6 +341,7 @@ interface Char123LocaleChar125RouteRouteChildren {
   Char123LocaleChar125ProjectSlugRoute: typeof Char123LocaleChar125ProjectSlugRoute
   Char123LocaleChar125ProjectsFourcuzRoute: typeof Char123LocaleChar125ProjectsFourcuzRoute
   Char123LocaleChar125ProjectsMuacleRoute: typeof Char123LocaleChar125ProjectsMuacleRoute
+  Char123LocaleChar125ProjectsRimpingRoute: typeof Char123LocaleChar125ProjectsRimpingRoute
   Char123LocaleChar125ProjectsSuthepRoute: typeof Char123LocaleChar125ProjectsSuthepRoute
   Char123LocaleChar125ProjectsZlalabsRoute: typeof Char123LocaleChar125ProjectsZlalabsRoute
   Char123LocaleChar125BlogIndexRoute: typeof Char123LocaleChar125BlogIndexRoute
@@ -339,6 +360,8 @@ const Char123LocaleChar125RouteRouteChildren: Char123LocaleChar125RouteRouteChil
       Char123LocaleChar125ProjectsFourcuzRoute,
     Char123LocaleChar125ProjectsMuacleRoute:
       Char123LocaleChar125ProjectsMuacleRoute,
+    Char123LocaleChar125ProjectsRimpingRoute:
+      Char123LocaleChar125ProjectsRimpingRoute,
     Char123LocaleChar125ProjectsSuthepRoute:
       Char123LocaleChar125ProjectsSuthepRoute,
     Char123LocaleChar125ProjectsZlalabsRoute:
