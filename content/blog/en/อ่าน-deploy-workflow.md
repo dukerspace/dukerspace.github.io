@@ -15,7 +15,7 @@ The workflow runs when code is pushed to the `main` branch. It can also be start
 The job runs on a team-managed runner (`self-host`) and has a 20-minute time limit. The workflow then:
 
 1. Downloads the code for the commit being deployed.
-2. Sets up Bun version `1.3.14`.
+2. Sets up Bun version `1.4.2`.
 3. Installs dependencies with `bun install --frozen-lockfile`.
 
 `--frozen-lockfile` means dependencies must match the versions already recorded in the lockfile. If the dependency manifest and lockfile do not match, installation stops instead of silently changing the lockfile. This makes the dependency set used for the build more predictable.

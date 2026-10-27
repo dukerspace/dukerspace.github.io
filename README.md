@@ -6,12 +6,11 @@ Live site: [https://dukerspace.com](https://dukerspace.com)
 
 ## Stack
 
-- [TanStack Start](https://tanstack.com/start) SPA mode + React 19 + TypeScript
-- [TanStack Router](https://tanstack.com/router)
+- [TanStack Router](https://tanstack.com/router) + React 19 + TypeScript + Vite
 - [Tailwind CSS](https://tailwindcss.com/) 4
-- Deployed to Cloudflare Workers through GitHub Actions (`production` environment)
+- Deployed to Cloudflare Pages through GitHub Actions (`production` environment)
 
-The production build is static. There is no request-time server. Known routes are prerendered to HTML, and unknown URLs fall back to the SPA shell.
+The production build is a client-rendered SPA. Vite generates `dist/index.html` and static assets; TanStack Router renders routes in the browser. There is no TanStack Start dependency, SSR bundle, or request-time server. The sitemap includes Thai and English routes.
 
 ## Prerequisites
 
@@ -31,10 +30,10 @@ Dev server runs at [http://localhost:3000](http://localhost:3000).
 | Command | Description |
 | --- | --- |
 | `bun start` / `bun dev` | Local development server |
-| `bun run build` | Production build → `dist/client/` |
+| `bun run build` | Production SPA build → `dist/` |
 | `bun run serve` | Serve the production build locally |
 | `bun run clean` | Remove `dist/` |
-| `bun run deploy` | Build and deploy the production Cloudflare Worker |
+| `bun run deploy` | Build and deploy to Cloudflare Pages |
 | `bun run format` | Format with Prettier |
 
 ## Locales
@@ -64,14 +63,14 @@ The slug is the filename. Add the same slug in both folders when a post has both
 
 ## Deploy
 
-The [deployment workflow](./.github/workflows/deploy.yml) runs on pushes to `main` or manually through GitHub Actions. The job uses the GitHub environment named `production` and deploys with `wrangler deploy --env production`.
+The [deployment workflow](./.github/workflows/deploy.yml) runs on pushes to `main` or manually through GitHub Actions. The job uses the GitHub environment named `production` and deploys `dist/` to the Cloudflare Pages project `dukerspace`. For Cloudflare Git integration, use `bun run build` as the build command and `dist` as the output directory.
 
-In GitHub **Settings > Environments > production**, add these environment secrets:
+In GitHub **Settings > Environments > production**, configure:
 
-- `CLOUDFLARE_API_TOKEN`: a scoped token with the **Edit Cloudflare Workers** permissions.
-- `CLOUDFLARE_ACCOUNT_ID`: the Cloudflare account ID.
+- Secret `CLOUDFLARE_API_TOKEN`: a scoped token with **Account > Cloudflare Pages > Edit** permission.
+- Variable `CLOUDFLARE_ACCOUNT_ID`: the Cloudflare account ID.
 
-The Worker is named `dukerspace-production` in [wrangler.jsonc](./wrangler.jsonc). Change it if deploying to an existing Worker with a different name. Configure `dukerspace.com` as its custom domain in Cloudflare; the GitHub Pages `CNAME` file does not configure Worker domains.
+The Pages project and build output are configured in [wrangler.jsonc](./wrangler.jsonc). Configure `dukerspace.com` as a custom domain on the Pages project in Cloudflare.
 
 For a local deployment, authenticate with `bunx wrangler login`, then run:
 
@@ -79,7 +78,7 @@ For a local deployment, authenticate with `bunx wrangler login`, then run:
 bun run deploy
 ```
 
-The existing preparation script copies the SPA shell as `404.html` into `dist/client/`. Cloudflare serves prerendered pages with extensionless URLs and uses that shell for unknown URLs, retaining a 404 response status.
+Do not add a top-level `404.html`: Cloudflare Pages automatically serves `index.html` for paths without a matching static asset, so direct links to Thai and English routes work with client-side routing.
 
 ## License
 
