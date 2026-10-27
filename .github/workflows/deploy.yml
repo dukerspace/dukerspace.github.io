@@ -2,7 +2,7 @@ name: Deploy Cloudflare Pages
 
 on:
   push:
-    branches: [main]
+    branches: [master]
   workflow_dispatch:
 
 jobs:
@@ -28,7 +28,8 @@ jobs:
           node -e "const fs = require('node:fs'); const assert = require('node:assert/strict'); assert.deepEqual(fs.readdirSync('dist', { recursive: true }).filter(f => f.endsWith('.html')), ['index.html']); assert.ok(!fs.existsSync('dist/server'));"
 
       - name: Deploy to Cloudflare Pages
-        run: bunx wrangler pages deploy dist --project-name=dukerspace
+        # Pages project production_branch is "main"; without it, master deploys land in Preview.
+        run: bunx wrangler pages deploy dist --project-name=dukerspace --branch=main
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}

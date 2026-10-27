@@ -29,7 +29,7 @@
     "build": "vite build",
     "start": "vite dev",
     "serve": "vite preview",
-    "deploy": "bun run build && wrangler pages deploy dist --project-name=dukerspace",
+    "deploy": "bun run build && wrangler pages deploy dist --project-name=dukerspace --branch=main",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "clean": "rm -rf dist .output .tanstack",
     "test": "echo \"No tests configured\" && exit 0"
