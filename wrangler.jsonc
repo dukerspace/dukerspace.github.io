@@ -2,14 +2,5 @@
 	"$schema": "./node_modules/wrangler/config-schema.json",
 	"name": "dukerspace",
 	"compatibility_date": "2026-10-27",
-	"env": {
-		"production": {
-			"name": "dukerspace-production",
-			"assets": {
-				"directory": "./dist/client",
-				"html_handling": "drop-trailing-slash",
-				"not_found_handling": "404-page",
-			},
-		},
-	},
+	"pages_build_output_dir": "./dist",
 }
